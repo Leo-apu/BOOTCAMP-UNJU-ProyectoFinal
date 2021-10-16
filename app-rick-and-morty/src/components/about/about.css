@@ -1,0 +1,9 @@
+.au {
+  background-image: url("../images/bg-about.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: grey;
+  background-size: cover;
+  height: 800%;
+}
