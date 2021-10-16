@@ -18,16 +18,22 @@ export default function Home() {
     const [chars,setChars] = useState([]);
     const   [api,setApi] = useState("https://rickandmortyapi.com/api/character/?")
     const [orden,setOrden] = useState(1);
+    const [e,setE] = useState(false);
     useEffect(()=>{
+        setE(false);
+            console.log(e);
             updateApi();
             console.log(api);
             console.log(filter);
             fetch(api)
-            .catch(() => {
-                console.log("error");
-            })
+                .then(response =>{
+                    if (!response.ok)throw Error(response.status);
+                        return response;
+                    
+                })
             .then((response) => response.json())
             .then((data) => {
+                
                 console.log(data);
                 setInfo(data.info);
                 if (data.results !== []) {
@@ -51,7 +57,16 @@ export default function Home() {
                         }))  
                 }
                 
-            });
+            })
+            .catch(error => {
+                console.log(typeof error.message);
+                console.log(error.message);
+                if (error.message === "404") {
+                    console.log("xdxdxd");
+                    setE(true);
+                }
+            
+            })
        
         
     },[api,filter,orden])
@@ -116,61 +131,15 @@ export default function Home() {
       return aux;
     })
 
-    const filtersAplication = (t,value)=>setApi(()=> {
-        let aux = url;
-        let first = true;
-        setFilter(()=>({
-            ...filter,
-                [t]: value
-        }))
-        console.log(filter);
-        if (filter.name !== "") {
-            if (first) {
-                first = false;
-                aux=aux +"name="+ filter.name;  
-            }else{
-                aux=aux +"&name="+ filter.name; 
-            }
-            
-        }
-        if (filter.specie !== "") {
-            if (first) {
-                aux=aux +"species="+ filter.specie;
-                first = false;
-            }else{
-                aux=aux +"&species="+filter.specie;
-            }
-        }
-        if (filter.status !== "") {
-            if (first) {
-                first=false;
-                aux=aux +"status="+ filter.status;
-            }else{
-                aux=aux +"&status="+filter.status;
-            }
-        }
-        if (filter.gender !== "") {
-            if (first) {
-                first=false;
-                aux=aux +"gender="+ filter.gender;
-            }else{
-                aux=aux +"&gender="+filter.gender;
-            }
-        }
-      return aux;
-
-        
-    })
-
     return(
         <>
         <Container fluid>
         <CompNavBar updateFilter={updateFilter}/>
             <Row>
                 <Col xs={2} id="sidebar-wrapper">
-                <SideBar filtersAplication={filtersAplication} sortChars={sortChars}/>
+                <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
                 </Col>
-                <Col xs={10} id="page-content-wrapper">
+                {e?(<Col><Row><h1>F</h1></Row></Col>):( <Col xs={10} id="page-content-wrapper">
                     <Row className="mt-4 text-center" >
                         {chars.map((data) => {
                                 return (
@@ -179,7 +148,8 @@ export default function Home() {
                             })
                         }
                     </Row>
-                </Col>
+                </Col>)}
+               
 
             </Row>
             <button onClick={() => nextPage()} >next</button>

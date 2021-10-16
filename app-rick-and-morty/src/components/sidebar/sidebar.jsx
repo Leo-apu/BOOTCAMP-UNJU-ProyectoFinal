@@ -24,7 +24,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
                 <Row>
-                    <Form.Select  onChange={(s) => props.filtersAplication("specie",s.target.value)}>
+                    <Form.Select  onChange={(s) => props.updateFilter("specie",s.target.value)}>
                         <option value="">Nothing</option>
                         {species.map((data) => {
                             return (
@@ -40,7 +40,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
                 <Row>
-                    <Form.Select  onChange={(s) => props.filtersAplication("status",s.target.value)}>
+                    <Form.Select  onChange={(s) => props.updateFilter("status",s.target.value)}>
                         <option value="">Nothing</option>
                         <option value="alive">Alive</option>
                         <option value="dead">Dead</option>
@@ -50,7 +50,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
             <Row>
-                    <Form.Select  onChange={(s) => props.filtersAplication("gender",s.target.value)}>
+                    <Form.Select  onChange={(s) => props.updateFilter("gender",s.target.value)}>
                         <option value="">Nothing</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
