@@ -54,7 +54,7 @@ const About =(props)=> {
 }
     return (
         <body className="au vh-100 " >
-            <Container >
+            <Container className="container-fluid">
                 <Row className="vh-100 justify-content-center align-content-center">
                     <Col className="col-md-7 my-5 ">
                     
