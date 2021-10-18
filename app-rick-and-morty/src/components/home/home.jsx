@@ -5,7 +5,7 @@ import {Container,Row,Card, Col} from 'react-bootstrap';
 import SideBar from '../sidebar/sidebar.jsx';
 
 
-export default function Home() {
+export default function Home(props) {
     
     const url = "https://rickandmortyapi.com/api/character/?"
     const [info,setInfo] = useState(null);
@@ -20,7 +20,7 @@ export default function Home() {
     const [orden,setOrden] = useState(1);
     const [e,setE] = useState(false);
     useEffect(()=>{
-        setE(false);
+        
             console.log(e);
             updateApi();
             console.log(api);
@@ -33,7 +33,7 @@ export default function Home() {
                 })
             .then((response) => response.json())
             .then((data) => {
-                
+                setE(false);
                 console.log(data);
                 setInfo(data.info);
                 if (data.results !== []) {
@@ -62,7 +62,6 @@ export default function Home() {
                 console.log(typeof error.message);
                 console.log(error.message);
                 if (error.message === "404") {
-                    console.log("xdxdxd");
                     setE(true);
                 }
             
@@ -70,6 +69,8 @@ export default function Home() {
        
         
     },[api,filter,orden])
+
+    useEffect(()=>{updateFilter("name",props.name)},[props])
     function nextPage() {
         setApi(info.next);
         console.log(api);
@@ -134,7 +135,6 @@ export default function Home() {
     return(
         <>
         <Container fluid>
-        <CompNavBar updateFilter={updateFilter}/>
             <Row>
                 <Col xs={2} id="sidebar-wrapper">
                 <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
