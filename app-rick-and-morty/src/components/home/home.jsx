@@ -103,7 +103,6 @@ export default function Home(props) {
             }else{
                 aux=aux +"&name="+ filter.name; 
             }
-            
         }
         if (filter.specie !== "") {
             if (first) {
@@ -149,19 +148,11 @@ export default function Home(props) {
                         }
                     </Row>
                 </Col>)}
-               
-
             </Row>
             <button onClick={() => nextPage()} >next</button>
             <button onClick={() => prevPage()} >prev</button>
             <button onClick={() => species()} >species</button>
-        </Container>
-         
-       
-                    
-                   
-                        
+        </Container>        
         </>
-        
     );
 }
