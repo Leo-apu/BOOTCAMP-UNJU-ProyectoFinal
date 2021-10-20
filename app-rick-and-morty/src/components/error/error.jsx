@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import "./error.css";
 
 export default class Error extends React.Component{
     render(){
         return(
-            <div class="background-img">
+            <Container id="back">
             <div class="space"></div>
                 <div class="wrapper">
                     <div class="img-wrapper">
@@ -14,7 +15,7 @@ export default class Error extends React.Component{
                     <button type="button">HOME</button>
                     <button type="button">ABOUT</button>
                 </div>
-            </div>
+            </Container>
         );
     }
 }
