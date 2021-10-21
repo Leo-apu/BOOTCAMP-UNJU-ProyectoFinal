@@ -1,0 +1,25 @@
+.acc {
+    padding: 10px ;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    color: black;
+    font-weight: bold;
+}
+.acc:hover{
+    color: crimson;
+}
+.bran{
+    margin-right: 30rem;
+    padding-left: 40px;
+    text-decoration: none;
+}
+.ic{
+    max-height: 80px;
+    width: 250px;
+}
+.fond{
+    background: rgb(3,50,32);
+    background: linear-gradient(77deg, rgba(3,50,32,1) 6%, rgba(23,105,17,1) 33%, rgba(21,198,77,1) 57%, rgba(254,255,0,1) 100%);
+}

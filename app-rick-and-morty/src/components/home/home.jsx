@@ -139,7 +139,7 @@ export default function Home(props) {
                 <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
                 </Col>
                 {e?(<Col><Row><h1>F</h1></Row></Col>):( <Col xs={10} id="page-content-wrapper">
-                    <Row className="mt-4 text-center" >
+                    <Row className="mt-4 text-center justify-content-around" >
                         {chars.map((data) => {
                                 return (
                                     <Character data={data}/>
