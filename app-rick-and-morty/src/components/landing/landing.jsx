@@ -17,12 +17,12 @@ export default class Landing extends React.Component{
                                 los tipos de Personajes que existen en la serie.</h2>
                             
                     </div>
-                    <div className="botn">
+                    <div className="botn mb-5">
                             <Button className="botn1">ABOUT</Button>
                             <Button className="botn1">HOME</Button>
-                            <Button className="botn1">CONTACT</Button>
                     </div>
                 </div>
+                <div className="gam"></div>
             </section>
         );
     }

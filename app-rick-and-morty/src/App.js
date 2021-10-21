@@ -8,6 +8,7 @@ import About from './components/about/about';
 import Contact from './components/contact/contact';
 import LandingPage from './components/landing/landing';
 import Error from './components/error/error';
+import Footer from './components/footer/footer';
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
         </Route>
 
       </Switch>
+      <Footer/>
     </BrowserRouter>
 
     

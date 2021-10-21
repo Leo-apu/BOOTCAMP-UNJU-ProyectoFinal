@@ -15,6 +15,7 @@ export default class Error extends React.Component{
                 <button type="button">HOME</button>
                 <button type="button">ABOUT</button>
             </div>
+            <div className="gam"></div>
             </Row>
         );
     }

@@ -44,6 +44,7 @@ export default function Character (){
                 <ListGroup className="list-group-flush">
                     <ListGroupItem>Genero: {char.gender}</ListGroupItem>
                     <ListGroupItem>Creado: {char.created}</ListGroupItem>
+                    <ListGroupItem>origen: {char.origin && char.origin.name}</ListGroupItem>
                     
 
                 </ListGroup>

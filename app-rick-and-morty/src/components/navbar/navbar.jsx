@@ -22,7 +22,6 @@ export default function CompNavBar(props) {
                     {showResults?(<Form.Control type="text" onChange={(s) => props.getName(s.target.value)} placeholder="example: Rick" />):null}
                 <Link className={Style.acc} onClick={onClickHome} to="/home"><Nav>Home</Nav></Link>
                 <Link className={Style.acc} onClick={onClick} to="/about"><Nav>About</Nav></Link>
-                <Link className={Style.acc} onClick={onClick} to="/contacto"><Nav>Contacto</Nav></Link>
                 </Nav>
                 
                 
