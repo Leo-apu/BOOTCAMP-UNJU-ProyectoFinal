@@ -1,0 +1,41 @@
+.landfo{
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url("https://i2.wp.com/www.puro-geek.com/wp-content/uploads/2021/08/rick-morty-season-5.jpg?fit=1200%2C675&ssl=1");
+    background-size: cover;
+}
+.contland {
+    text-align: center;
+}
+.contland h2 {
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+}
+.contland h1 {
+    font-size: 7rem;
+    text-shadow: 5px 5px 5px gold;
+}
+.botn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button{
+    background-color: orangered;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+}
