@@ -6,7 +6,8 @@ import "../about/about.css";
 const About =(props)=> {
     return (
         
-            <Container className="fondo container-fluid">
+            <section className="au">
+                <Container className="d-block container-fluid">
                 <Row className="wrapperr vh-100 justify-content-center align-content-center">
                     <Col className="col my-5 d-flex">
                             <Row className="container align-content-center">
@@ -46,12 +47,10 @@ const About =(props)=> {
                             </Row> 
 
                             
-                    </Col>
-                            
+                    </Col>                            
                 </Row>
-            </Container>
-       
-        
+                </Container>
+            </section>
     );
 }
 
