@@ -1,10 +1,16 @@
 import {Navbar,Nav,NavDropdown,Form,FormControl,Button, Container,InputGroup} from 'react-bootstrap';
+import {NavLink,Link,useLocation} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+
 export default function CompNavBar(props) {
     
+    const [showResults, setShowResults] = useState(false)
+    const onClick = () => setShowResults(false);
+    const onClickHome = () => setShowResults(true)
 
     return(
             <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+            <Link onClick={onClick} to="/"><Navbar.Brand> Rick and Morty </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
@@ -12,25 +18,15 @@ export default function CompNavBar(props) {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
                 >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
-                <NavDropdown title="Link" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#" disabled>
-                    Link
-                </Nav.Link>
+                    <Link onClick={onClickHome} to="/home"><Nav>Home</Nav></Link>
+                <Link onClick={onClick} to="/about"><Nav>About</Nav></Link>
+                <Link onClick={onClick} to="/contacto"><Nav>Contacto</Nav></Link>
                 </Nav>
-                <InputGroup onChange={(s) => props.updateFilter("name",s.target.value)} className="mb-3">
-                    <InputGroup.Text id="inputGroup-sizing-default">Default</InputGroup.Text>
-                    <FormControl
-                    aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default"
-                    />
-                </InputGroup>
+                <Nav>
+                    {showResults?(<Form.Control type="text" onChange={(s) => props.getName(s.target.value)} placeholder="example: Rick" />):null}
+               
+                </Nav>
+                
             </Navbar.Collapse>
             </Navbar>
         
