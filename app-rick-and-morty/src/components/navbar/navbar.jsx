@@ -10,7 +10,7 @@ export default function CompNavBar(props) {
 
     return(
             <Navbar bg="light" expand="lg">
-            <Link onClick={onClick} to="/"><Navbar.Brand> Rick and Morty </Navbar.Brand></Link>
+            <Link onClick={onClick} to="/landingPage"><Navbar.Brand> Rick and Morty </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
