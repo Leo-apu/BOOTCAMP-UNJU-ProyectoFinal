@@ -8,7 +8,7 @@ const About =(props)=> {
         
             <section className="au">
                 <Container className="d-block container-fluid">
-                <Row className="wrapperr vh-100 justify-content-center align-content-center">
+                <Row className="wrapperr justify-content-center align-content-center">
                     <Col className="col my-5 d-flex">
                             <Row className="container align-content-center">
                             <div className="col-md-4 bg-info">

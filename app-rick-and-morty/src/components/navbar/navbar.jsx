@@ -11,22 +11,20 @@ export default function CompNavBar(props) {
 
     return(
             <Navbar className={Style.fond} expand="lg">
-            <Link className={Style.bran} onClick={onClick} to="/landingPage"><Navbar.Brand> <img src="https://www.brurya.co.il/image/cache/catalog/brands/RM-600x315w.png" className={Style.ic} alt="logo-rm"></img> </Navbar.Brand></Link>
+            <Link className={Style.bran} onClick={onClick} to="/"><Navbar.Brand> <img src="https://www.brurya.co.il/image/cache/catalog/brands/RM-600x315w.png" className={Style.ic} alt="logo-rm"></img> </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
+            <Navbar.Collapse id="navbarScroll" className="justify-content-end">
+
                 <Nav
-                className="mr-auto my-2 my-lg-0"
                 style={{ maxHeight: '100px' }}
                 navbarScroll
                 >
+                    {showResults?(<Form.Control type="text" onChange={(s) => props.getName(s.target.value)} placeholder="example: Rick" />):null}
                 <Link className={Style.acc} onClick={onClickHome} to="/home"><Nav>Home</Nav></Link>
                 <Link className={Style.acc} onClick={onClick} to="/about"><Nav>About</Nav></Link>
                 <Link className={Style.acc} onClick={onClick} to="/contacto"><Nav>Contacto</Nav></Link>
                 </Nav>
-                <Nav>
-                    {showResults?(<Form.Control type="text" onChange={(s) => props.getName(s.target.value)} placeholder="example: Rick" />):null}
-               
-                </Nav>
+                
                 
             </Navbar.Collapse>
             </Navbar>

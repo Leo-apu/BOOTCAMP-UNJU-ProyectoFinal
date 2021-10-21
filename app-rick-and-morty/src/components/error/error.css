@@ -1,19 +1,13 @@
 .bg{
-  height: 92.5vh;
+  height: 85.6vh;
   background-color: black;
   margin: 0;
 }
 
-#idcanvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #111a22;
-}
 .wrapper {
   position: absolute;
   margin: auto;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   left: 0;
   right: 0;
@@ -85,7 +79,7 @@
 .space {
   position: absolute;
   width: 100vw;
-  height: 92.5vh;
+  height: 85.6vh;
   z-index: 1;
   background-size: 240px;
   backface-visibility: visible;

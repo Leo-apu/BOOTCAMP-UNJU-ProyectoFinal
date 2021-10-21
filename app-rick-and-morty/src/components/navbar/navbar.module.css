@@ -1,11 +1,21 @@
+@font-face {
+    font-family: 'GSR';
+    src: url('../font/get_schwifty-webfont.woff2') format('woff2'),
+         url('../font/get_schwifty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .acc {
     padding: 10px ;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
     font-variant: small-caps;
     color: black;
     font-weight: bold;
+    font-family: 'GSR';
 }
 .acc:hover{
     color: crimson;

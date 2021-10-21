@@ -39,7 +39,7 @@ function App() {
           <Contact />
         </Route>
 
-        <Route exact path="/landingPage">
+        <Route exact path="/">
           <LandingPage />
         </Route>
         <Route path="/">

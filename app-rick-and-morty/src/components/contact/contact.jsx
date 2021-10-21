@@ -53,9 +53,9 @@ const Contact =(props)=> {
                 )
 }
     return (
-        <body className="co vh-100 " >
+        <body className="co " >
             <Container className="container-fluid">
-                <Row className="vh-100 justify-content-center align-content-center">
+                <Row className="justify-content-center align-content-center">
                     <Col className="col-md-5 my-5 ">
                         <Col className="bg-warning bg-opacity-50 rounded-3">
                         <div class="container mt-3 ">

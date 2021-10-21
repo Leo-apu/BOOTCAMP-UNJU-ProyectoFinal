@@ -1,8 +1,9 @@
 .au {
   background-image: url("https://www.fondoshd.mx/descargar.php?id=4499&resolucion=1280x800");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-attachment: fixed;
   background-color: grey;
   background-size: cover;
+  height: 85.6vh;
 }
