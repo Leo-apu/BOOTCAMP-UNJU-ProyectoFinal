@@ -43,8 +43,6 @@ export default function Character (){
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                     <ListGroupItem>Genero: {char.gender}</ListGroupItem>
-                    <ListGroupItem>Origen: {char.origin.name}</ListGroupItem>
-                    <ListGroupItem>Localizacion: {char.location.name}</ListGroupItem>
                     <ListGroupItem>Creado: {char.created}</ListGroupItem>
                     
 
