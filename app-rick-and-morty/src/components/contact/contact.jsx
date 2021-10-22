@@ -59,7 +59,7 @@ const Contact =(props)=> {
                     <Col className="col-md-5 my-5 ">
                         <Col className="bg-warning bg-opacity-50 rounded-3">
                         <div class="container mt-3 ">
-                        <Form onSubmit={(e) => onSubmitForm(e)} >
+                        <Form onSubmit={(e) => onSubmitForm(e)} className="py-4">
                             <h5 className="text-center text-light">FORMULARIO DE CONTACTO</h5>
                             <div className="d-grid">
                                 <label class="col-sm-2 col-form-label text-light "> EMAIL </label>
@@ -121,6 +121,7 @@ const Contact =(props)=> {
                     </Col>
                 </Row>
             </Container>
+            <div className="gam"></div>
         </body>
         
     );

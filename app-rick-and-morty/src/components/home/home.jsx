@@ -134,6 +134,7 @@ export default function Home(props) {
     return(
         <>
         <Container fluid>
+        
             <Row>
                 <Col xs={2} id="sidebar-wrapper">
                 <SideBar updateFilter={updateFilter} sortChars={sortChars}/>

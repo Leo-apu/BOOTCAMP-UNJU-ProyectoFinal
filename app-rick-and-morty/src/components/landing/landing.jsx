@@ -7,6 +7,7 @@ export default class Landing extends React.Component{
     render(){
         return(
             <section className="landfo">
+                <div className="gam-top"></div>
                 <div className="contland">
                     <h1>Rick and Morty</h1>
                     <div className="d-flex text-black text-center ">
@@ -17,12 +18,12 @@ export default class Landing extends React.Component{
                                 los tipos de Personajes que existen en la serie.</h2>
                             
                     </div>
-                    <div className="botn">
+                    <div className="botn mb-5">
                             <Button className="botn1">ABOUT</Button>
                             <Button className="botn1">HOME</Button>
-                            <Button className="botn1">CONTACT</Button>
                     </div>
                 </div>
+                <div className="gam"></div>
             </section>
         );
     }

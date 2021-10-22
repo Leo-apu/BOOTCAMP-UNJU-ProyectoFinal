@@ -50,6 +50,7 @@ const About =(props)=> {
                     </Col>                            
                 </Row>
                 </Container>
+                <div className="gam"></div>
             </section>
     );
 }
