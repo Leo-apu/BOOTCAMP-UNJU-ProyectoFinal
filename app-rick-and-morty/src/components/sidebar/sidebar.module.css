@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'GSR';
+    src: url('../font/get_schwifty-webfont.woff2') format('woff2'),
+         url('../font/get_schwifty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'shlopregular';
+    src: url('../font/custom/shlop_rg-webfont.woff2') format('woff2'),
+         url('../font/custom/shlop_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.titfilt {
+    font-family: 'GSR';
+    font-size: 50px;
+    text-align: center;
+    color: rgb(5, 226, 42);
+    text-shadow: 2px 0 0 black, 0 0 1px rgb(229, 255, 0), 0 0 5px rgb(46, 121, 3);
+
+}
+
+.ord{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    
+}
+.ordbtn{
+    background-color: rgb(29, 199, 14);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    font-family: 'shlopregular';
+    font-size: 35px;
+}
+.ordbtn:hover{
+    background-color: rgb(239, 255, 16);
+    color: black;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.24), 0 1px 20px 0 rgba(0,0,0,0.19);
+}
+.sel{
+    background-color: coral;
+    padding: 10px;
+    margin: 5px 0 5px 10px;
+    font-size: 20px;
+    font-family: fantasy;
+    
+}
+

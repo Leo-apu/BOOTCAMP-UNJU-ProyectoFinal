@@ -1,3 +1,19 @@
+
+@font-face {
+  font-family: 'shlopregular';
+  src: url('../font/custom/shlop_rg-webfont.woff2') format('woff2'),
+       url('../font/custom/shlop_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+.fon{
+  opacity: 0.9;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px 10px #80da0a;
+}
+
 .co {
   background-image: url("../images/bg-about.jpg");
   background-repeat: no-repeat;
@@ -6,4 +22,17 @@
   background-color: grey;
   background-size: cover;
   height: 85.6vh;
+  font-family: 'shlopregular';
+}
+.ju {
+  text-decoration: none;
+  color: black;
+}
+.btn:hover{
+  background-color: rgb(255, 16, 16);
+  text-decoration: none;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.ju:hover{
+  color:black;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Form,Row,Col,Container,Button} from "react-bootstrap";
 import "../contact/contact.css";
+import {Link} from 'react-router-dom';
 
 export function validation (input) {
     let errors = {}
@@ -53,76 +54,79 @@ const Contact =(props)=> {
                 )
 }
     return (
-        <body className="co " >
+        <section className="co " >
             <Container className="container-fluid">
                 <Row className="justify-content-center align-content-center">
                     <Col className="col-md-5 my-5 ">
-                        <Col className="bg-warning bg-opacity-50 rounded-3">
-                        <div class="container mt-3 ">
-                        <Form onSubmit={(e) => onSubmitForm(e)} className="py-4">
-                            <h5 className="text-center text-light">FORMULARIO DE CONTACTO</h5>
-                            <div className="d-grid">
-                                <label class="col-sm-2 col-form-label text-light "> EMAIL </label>
-                                <input
-                                    type="text"
-                                    class="form-control p-3"
-                                    name='email'
-                                    placeholder="Ingrese su Email : aaaa@gmail.com"
-                                    value={state.email}
-                                    onChange={(e) => onHandleChange(e)}
-                                /> 
-                                {fails.email ?
-                                    <div class="alert alert-danger" role="alert">
-                                    <p style={{color: 'red'}}> {fails.email}</p> 
+                        <Col className="bg-warning rounded-3 fon">
+                            <div class="container mt-3 ">
+                                <Form onSubmit={(e) => onSubmitForm(e)} className="py-4">
+                                    <h5 className="text-center text-black fs-1">FORMULARIO DE CONTACTO</h5>
+                                    <div className="d-grid">
+                                        <label class="col-sm-2 col-form-label text-black fs-3"> EMAIL </label>
+                                        <input
+                                            type="text"
+                                            class="form-control p-3"
+                                            name='email'
+                                            placeholder="Ingrese su Email : aaaa@gmail.com"
+                                            value={state.email}
+                                            onChange={(e) => onHandleChange(e)}
+                                        /> 
+                                        {fails.email ?
+                                            <div class="alert alert-danger" role="alert">
+                                            <p style={{color: 'red'}}> {fails.email}</p> 
+                                            </div>
+                                            : <p></p>
+                                        }
+                                    </div> 
+                                    <div>
+                                        <label class="col-sm-2 col-form-label text-black fs-3"> ASUNTO </label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name='asunto'
+                                            placeholder="Ingrese Asunto : minimo 10 caracteres"
+                                            value={state.asunto}
+                                            onChange={(e) => onHandleChange(e)}
+                                        /> 
+                                        {fails.asunto && 
+                                        <div class="alert alert-danger" role="alert">
+                                        <p style={{color: 'red'}}> {fails.asunto} </p>
+                                        </div>
+                                        }
+                                    </div> 
+                                    <div>
+                                        <label class="col-sm-2 col-form-label mt-2 text-black fs-3"> MENSAJE </label>
+                                        <textarea
+                                            type="text"
+                                            class="form-control p-3 mb-2"
+                                            name='mensaje'
+                                            placeholder="Ingrese su Mensaje : Maximo de 256 palabras"
+                                            value={state.mensaje}
+                                            onChange={(e) => onHandleChange(e)}
+                                        /> 
+                                        {fails.mensaje && 
+                                        <div class="alert alert-danger" role="alert">
+                                        <p style={{color: 'red'}}> {fails.mensaje} </p>
+                                        </div>
+                                        }
                                     </div>
-                                    : <p></p>
-                                }
-                            </div> 
-                            <div>
-                                <label class="col-sm-2 col-form-label text-light "> ASUNTO </label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name='asunto'
-                                    placeholder="Ingrese Asunto : minimo 10 caracteres"
-                                    value={state.asunto}
-                                    onChange={(e) => onHandleChange(e)}
-                                /> 
-                                {fails.asunto && 
-                                <div class="alert alert-danger" role="alert">
-                                <p style={{color: 'red'}}> {fails.asunto} </p>
-                                </div>
-                                }
-                            </div> 
-                            <div>
-                                <label class="col-sm-2 col-form-label mt-2 text-light "> MENSAJE </label>
-                                <textarea
-                                    type="text"
-                                    class="form-control p-3 mb-2"
-                                    name='mensaje'
-                                    placeholder="Ingrese su Mensaje : Maximo de 256 palabras"
-                                    value={state.mensaje}
-                                    onChange={(e) => onHandleChange(e)}
-                                /> 
-                                {fails.mensaje && 
-                                <div class="alert alert-danger" role="alert">
-                                <p style={{color: 'red'}}> {fails.mensaje} </p>
-                                </div>
-                                }
+                                    <div className="d-flex justify-content-around">
+                                        <Button  type="submit" className="btn btn-success btn-lg " disabled={ fails.email || fails.asunto|| fails.mensaje || state.email === "" || state.asunto === "" || state.mensaje === ""  ? true : false  }>
+                                        <Link className="ju" to="/home" >Enviar</Link>
+                                        </Button>
+                                        <Button  type="submit" className="btn btn-danger btn-lg " >
+                                        <Link className="ju" to="/home" >Cancel</Link>
+                                        </Button>
+                                    </div>
+                                </Form>     
                             </div>
-                            <div className="d-grid">
-                                <Button  type="submit" className="btn btn-danger" disabled={ fails.email || fails.asunto|| fails.mensaje || state.email === "" || state.asunto === "" || state.mensaje === ""  ? true : false  }>
-                                Enviar
-                                </Button>
-                            </div>
-                        </Form>     
-                            </div>
-                            </Col>
+                        </Col>
                     </Col>
                 </Row>
             </Container>
-            <div className="gam"></div>
-        </body>
+            
+        </section>
         
     );
 }

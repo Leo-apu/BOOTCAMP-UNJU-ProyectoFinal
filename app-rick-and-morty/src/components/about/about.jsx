@@ -12,15 +12,15 @@ const About =(props)=> {
                     <Col className="col my-5 d-flex">
                             <Row className="container align-content-center">
                             <div className="col-md-4 bg-info">
-                                <img src="..." className="img-fluid rounded-start" alt="..."></img>
+                                <img src="CoM.jpg" className="img-fluid rounded-start" alt="..."></img>
                             </div>
                             <Card className="col-md-8 rounded-end" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
                                 <Card.Header>DESARROLLADOR</Card.Header>
                                 <Card.Body>
                                 <Card.Title>INFORMACION</Card.Title>
-                                <Card.Text>
-                                    <p class="fw-bold text-dark">CRISTIAN MICHEL - BOOTCAMP-REACT</p>
-                                </Card.Text>
+                                <Card.Subtitle>
+                                    <p class="fw-bold text-dark">CRISTIAN MICHEL</p>
+                                </Card.Subtitle>
                                 <Card.Text>
                                     <small class="text-muted"> Contacto: MIKE47K@gmail.com </small>
                                 </Card.Text>
@@ -36,9 +36,9 @@ const About =(props)=> {
                                 <Card.Header>DESARROLLADOR</Card.Header>
                                 <Card.Body>
                                 <Card.Title>INFORMACION</Card.Title>
-                                <Card.Text>
-                                    <p class="fw-bold text-dark">LEANDRO CRUZ - BOOTCAMP-REACT</p>
-                                </Card.Text>
+                                <Card.Subtitle>
+                                    <p class="fw-bold text-dark">LEANDRO CRUZ </p>
+                                </Card.Subtitle>
                                 <Card.Text>
                                     <small class="text-muted"> Contacto: LEOCRUZ@gmail.com </small>
                                 </Card.Text>
@@ -50,7 +50,6 @@ const About =(props)=> {
                     </Col>                            
                 </Row>
                 </Container>
-                <div className="gam"></div>
             </section>
     );
 }
