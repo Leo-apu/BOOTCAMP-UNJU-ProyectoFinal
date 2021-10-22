@@ -7,6 +7,7 @@ export default class Landing extends React.Component{
     render(){
         return(
             <section className="landfo">
+                <div className="gam-top"></div>
                 <div className="contland">
                     <h1>Rick and Morty</h1>
                     <div className="d-flex text-black text-center ">

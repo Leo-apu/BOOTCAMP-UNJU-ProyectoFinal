@@ -8,9 +8,18 @@
     background-image: url("https://i2.wp.com/www.puro-geek.com/wp-content/uploads/2021/08/rick-morty-season-5.jpg?fit=1200%2C675&ssl=1");
     background-size: cover;
 }
+.gam-top{
+    position: absolute;
+top: 6rem;
+    background-image: linear-gradient(to bottom, rgba(23,105,17,1), rgba(23,105,17,.8), rgba(23,105,17,.4), transparent 100%);
+height: 3.5rem;
+z-index: 777;
+width: 100%;
+
+}
 .gam{
     position: absolute;
-bottom: -1rem;
+bottom: 0;
     background-image: linear-gradient(to top, rgba(23,30,42,1), rgba(23,30,42,.8), rgba(23,30,42,.4), transparent 100%);
 height: 3.5rem;
 z-index: 777;

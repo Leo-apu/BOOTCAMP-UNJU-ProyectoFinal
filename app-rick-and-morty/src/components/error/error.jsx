@@ -6,6 +6,7 @@ export default class Error extends React.Component{
     render(){
         return(
             <Row className="bg">
+                <div className="gam-top"></div>
             <div class="space"></div>
             <div class="wrapper">
                 <div class="img-wrapper">
