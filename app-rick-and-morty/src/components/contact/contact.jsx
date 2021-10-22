@@ -55,7 +55,7 @@ const Contact =(props)=> {
 }
     return (
         <section className="co " >
-            <Container className="container-fluid">
+            <Container className="container-fluid mb-4">
                 <Row className="justify-content-center align-content-center">
                     <Col className="col-md-5 my-5 ">
                         <Col className="bg-warning rounded-3 fon">
