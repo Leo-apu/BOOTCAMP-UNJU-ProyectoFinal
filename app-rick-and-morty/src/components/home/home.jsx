@@ -145,9 +145,9 @@ export default function Home(props) {
             <Row>
                 <Col xs={2} id="sidebar-wrapper">
                 <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
-                <div className="btn-group justify-content-center mt-3 fs-1" >
-                    <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success" onClick={() => updateFilter("page",filter.page -1)} >prev</button>
-                    <button type="button"  className="btn btn-success" onClick={() => updateFilter("page",filter.page +1)} >next</button>
+                <div className={hmm.botGroup} >
+                    <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success fs-3" onClick={() => updateFilter("page",filter.page -1)} >Prev</button>
+                    <button type="button"  className="btn btn-success fs-3" onClick={() => updateFilter("page",filter.page +1)} >Next</button>
                 </div>
                 </Col>
                 {err?(<Col><Row><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">
