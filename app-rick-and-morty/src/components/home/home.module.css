@@ -1,0 +1,16 @@
+.fondohome1{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: rgb(247,222,23);
+    background: linear-gradient(0deg, rgba(247,222,23,1) 0%, rgba(21,32,4,1) 0%, rgba(30,62,6,1) 19%, rgba(83,231,18,1) 54%, rgba(106,168,2,1) 100%);
+}
+.fondohome{
+    /*background-image: url("https://wallpaperaccess.com/full/6799082.jpg");*/
+    /*background-image: url("https://wallpaperaccess.com/download/rick-and-morty-space-831789");*/
+    background-image: url("https://wallpaperaccess.com/download/rick-and-morty-hd-637699");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}

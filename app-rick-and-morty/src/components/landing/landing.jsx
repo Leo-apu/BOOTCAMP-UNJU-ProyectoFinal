@@ -1,6 +1,7 @@
 import Button from "@restart/ui/esm/Button";
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import {Link} from "react-router-dom";
 import "./landing.css";
 
 export default class Landing extends React.Component{
@@ -9,7 +10,7 @@ export default class Landing extends React.Component{
             <section className="landfo">
                 <div className="gam-top"></div>
                 <div className="contland">
-                    <h1>Rick and Morty</h1>
+                    <h1 className="rm">Rick and Morty</h1>
                     <div className="d-flex text-black text-center ">
                         <h2>Esta pagina web fue diseñada con el objetivo<br/>
                             de mostrar atraves una aplicacion creada en <br/>
@@ -19,8 +20,12 @@ export default class Landing extends React.Component{
                             
                     </div>
                     <div className="botn mb-5">
+                        <Link to="/about">
                             <Button className="botn1">ABOUT</Button>
+                        </Link>
+                        <Link to="/home">
                             <Button className="botn1">HOME</Button>
+                        </Link>
                     </div>
                 </div>
                 <div className="gam"></div>

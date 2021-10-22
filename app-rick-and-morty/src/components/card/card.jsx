@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import {Form,Row,Container,Card,ListGroup,ListGroupItem,Col} from 'react-bootstrap';
-
+import crca from './card.module.css';
 
 export default function Character (){
 
@@ -24,37 +24,34 @@ export default function Character (){
     },[parametro])
 
 
-
         return (    
-            
-            <Container>
-               
-        
-
-
-                <Row className="mt-4">
-                        <Col className="col-4 offset-4">
-                        <Card style={{ width: '18rem' }} >
+            <section className={crca.fonca}>
+            <div className={crca.gamca}></div>
+            <Container >
+                <Row className="mt-1">
+                    <Col className="col-4 offset-4">
+                        <Card className={crca.fnca} style={{ width: '20rem' }} >
                 
-                <Card.Body>
-                    <Card.Title className="text-center">{char.name}</Card.Title>
-                    <Card.Img variant="top" src={char.image}  />
-                    <Card.Text>Estado: {char.status}</Card.Text>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroupItem>Genero: {char.gender}</ListGroupItem>
-                    <ListGroupItem>Creado: {char.created}</ListGroupItem>
-                    <ListGroupItem>origen: {char.origin && char.origin.name}</ListGroupItem>
-                    
-
-                </ListGroup>
-                </Card>
-                        </Col>
+                            <Card.Body>
+                                <Card.Title className={crca.titulca}>{char.name}</Card.Title>
+                                <Card.Img className={crca.fotca} variant="top" src={char.image}  />
+                                <Card.Text className={crca.tex}>Estado: {char.status}</Card.Text>
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                                <ListGroupItem>Genero: {char.gender}</ListGroupItem>
+                                <ListGroupItem>Creado: {char.created}</ListGroupItem>
+                                <ListGroupItem>origen: {char.origin && char.origin.name}</ListGroupItem>
+                                
+                            </ListGroup>
+                        </Card>
+                        
+                    </Col>
                 
                 </Row>
                 
 
 
            </Container>
+           </section>
         )
 }

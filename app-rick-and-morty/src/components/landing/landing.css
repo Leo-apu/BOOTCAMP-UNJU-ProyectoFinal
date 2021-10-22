@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'GSR';
+    src: url('../font/get_schwifty-webfont.woff2') format('woff2'),
+         url('../font/get_schwifty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 .landfo{
     height: 85.6vh;
@@ -35,10 +43,12 @@ width: 100%;
     margin-bottom: 4rem;
     text-transform: capitalize;
     text-shadow: 0 0 10px   rgb(255, 79, 9),2px 2px 10px   greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contland h1 {
     font-size: 7rem;
     text-shadow: 5px 5px 8px gold, 2px 2px 10px red;
+    font-family: 'GSR';
 }
 .botn {
     display: flex;

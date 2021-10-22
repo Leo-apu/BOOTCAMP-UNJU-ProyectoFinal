@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'GSR';
+    src: url('../font/get_schwifty-webfont.woff2') format('woff2'),
+         url('../font/get_schwifty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.fn {
+    margin: 10px;
+    text-align: center;
+    background: rgb(2, 0, 8);
+    color: rgb(43, 255, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    transition: 0.1s;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.fn:hover{
+    box-shadow: 0 8px 16px 0 rgb(230, 255, 4);
+}
+.fot {
+    margin-top: 10px;
+    border-top-style: 100px;
+    object-fit: cover;
+    transition: 500ms;
+}
+.fot:hover{
+    transform: scale3d(1.1,1.1,1.1);
+    transition: 500ms;
+}
+.ik {
+    text-decoration: none;
+    color: white;
+}
+.ik:hover {
+    color: rgb(255, 238, 5);
+}
+.titul{
+    font-family: 'GSR';
+}

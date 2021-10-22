@@ -1,9 +1,9 @@
 import {useEffect,useState} from 'react';
 import Character from '../character/character.jsx';
 import CompNavBar from '../navbar/navbar.jsx';
-import {Container,Row,Card, Col} from 'react-bootstrap';
+import {Container,Row,Card, Col, ButtonGroup} from 'react-bootstrap';
 import SideBar from '../sidebar/sidebar.jsx';
-
+import hmm from './home.module.css';
 
 export default function Home(props) {
     
@@ -133,11 +133,16 @@ export default function Home(props) {
 
     return(
         <>
-        <Container fluid>
+        <Container className={hmm.fondohome} fluid>
         
             <Row>
                 <Col xs={2} id="sidebar-wrapper">
                 <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
+                <div className="btn-group justify-content-center mt-3 fs-1" >
+                    <button type="button" className="btn btn-success" onClick={() => prevPage()} >prev</button>
+                    <button type="button" className="btn btn-success" onClick={() => species()} >------</button>
+                    <button type="button" className="btn btn-success" onClick={() => nextPage()} >next</button>
+                </div>
                 </Col>
                 {e?(<Col><Row><h1>F</h1></Row></Col>):( <Col xs={10} id="page-content-wrapper">
                     <Row className="mt-4 text-center justify-content-around" >
@@ -148,11 +153,9 @@ export default function Home(props) {
                             })
                         }
                     </Row>
+                    
                 </Col>)}
             </Row>
-            <button onClick={() => nextPage()} >next</button>
-            <button onClick={() => prevPage()} >prev</button>
-            <button onClick={() => species()} >species</button>
         </Container>        
         </>
     );
