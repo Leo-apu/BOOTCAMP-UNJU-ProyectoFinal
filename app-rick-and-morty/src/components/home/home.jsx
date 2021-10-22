@@ -41,9 +41,9 @@ export default function Home(props) {
      
 
                     if (orden === 1) {
-                        data.results.sort((a, b) => (a.id - b.id));
+                        data.results.sort((a, b) => (a.name > b.name ? 1 : -1))
                     }else{
-                        data.results.sort((a, b) => (b.id - a.id));
+                        data.results.sort((a, b) => (b.name > a.name  ? 1 : -1))
                     }
                     setChars(
                         data.results

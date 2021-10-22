@@ -22,7 +22,7 @@ const About =(props)=> {
                                     <p class="fw-bold text-dark">CRISTIAN MICHEL</p>
                                 </Card.Subtitle>
                                 <Card.Text>
-                                    <small class="text-muted"> Contacto: MIKE47K@gmail.com </small>
+                                    <small class="text-muted"> Contacto: cristianmichel33@gmail.com </small>
                                 </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -40,7 +40,7 @@ const About =(props)=> {
                                     <p class="fw-bold text-dark">LEANDRO CRUZ </p>
                                 </Card.Subtitle>
                                 <Card.Text>
-                                    <small class="text-muted"> Contacto: LEOCRUZ@gmail.com </small>
+                                    <small class="text-muted"> Contacto: leovcruz0304@gmail.com </small>
                                 </Card.Text>
                                 </Card.Body>
                             </Card>
