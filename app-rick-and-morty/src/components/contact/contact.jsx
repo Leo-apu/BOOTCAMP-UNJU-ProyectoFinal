@@ -36,10 +36,7 @@ const Contact =(props)=> {
         mensaje:""
     });
 
-    function onSubmitForm(e){
-            e.preventDefault();
-            alert(`el correo es ${state.email} y el asunto es ${state.asunto}`)
-    }
+    
 
     function onHandleChange(e){
             setState({
@@ -60,7 +57,7 @@ const Contact =(props)=> {
                     <Col className="col-md-5 my-5 ">
                         <Col className="bg-warning rounded-3 fon">
                             <div class="container mt-3 ">
-                                <Form onSubmit={(e) => onSubmitForm(e)} className="py-4">
+                                <Form className="py-4">
                                     <h5 className="text-center text-black fs-1">FORMULARIO DE CONTACTO</h5>
                                     <div className="d-grid">
                                         <label class="col-sm-2 col-form-label text-black fs-3"> EMAIL </label>
