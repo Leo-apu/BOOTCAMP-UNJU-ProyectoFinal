@@ -20,22 +20,24 @@ export default function Home(props) {
     const   [api,setApi] = useState("https://rickandmortyapi.com/api/character/?")
     const [orden,setOrden] = useState(1);
     const [err,setE] = useState();
+    var e = false;
     useEffect(()=>{
             updateApi();
-            console.log(err);
-            
+            console.log(".............");
             console.log(api);
-            console.log(filter);
-            fetch(api)
+            console.log(err);
+            console.log(".............");
+            
+            const getUser = async () => {
+                await fetch(api)
                 .then(response =>{
+                    setE(!response.ok);
                     if (!response.ok)throw Error(response.status);
                         return response;
                     
                 })
             .then((response) => response.json())
             .then((data) => {
-                updateError(false);
-                console.log(data);
                 setInfo(data.info);
                 if (data.results !== []) {
      
@@ -62,27 +64,32 @@ export default function Home(props) {
                 
             })
             .catch(error => {
-                console.log(typeof error.message);
-                console.log(error.message);
                 if (error.message === "404") {
-                    updateError(true);
+                    console.log(error);
+                    
                 }
             
             })
-       
+        }
+        getUser();
         
     },[orden,api,filter])
+    
 
     useEffect(()=>{updateFilter("name",props.name)},[props])
 
-    const updateError = (val) => setE(()=>{
-        return val;
-    })
+    const contErr = () =>{
+        await fetch(api).then(response =>{
+                    return response.ok;
+
+                })
+    }
 
     const sortChars = (v)=> setOrden(()=>{
         return v;
         
     })
+
 
     
     const updateFilter = (t,value) => setFilter(()=>({
@@ -150,7 +157,7 @@ export default function Home(props) {
                     <button type="button"  className="btn btn-success fs-3" onClick={() => updateFilter("page",filter.page +1)} >Next</button>
                 </div>
                 </Col>
-                {err?(<Col><Row><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">
+                {contErr()?(<Col className="align-center text-center"> <Row><h2 className={hmm.err}>ERROR 404</h2></Row> <Row ><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">
                     <Row className="mt-4 text-center justify-content-around" >
                         {chars.map((data) => {
                                 return (

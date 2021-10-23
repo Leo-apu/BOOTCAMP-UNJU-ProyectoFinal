@@ -1,3 +1,22 @@
+
+@font-face {
+  font-family: 'GSR';
+  src: url('../font/get_schwifty-webfont.woff2') format('woff2'),
+       url('../font/get_schwifty-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+.err {
+  font-family: 'GSR';
+  font-size: 50px;
+  text-align: center;
+  color: rgb(5, 226, 42);
+  text-shadow: 2px 0 0 black, 0 0 1px rgb(229, 255, 0), 0 0 5px rgb(46, 121, 3);
+
+}
+
+
 .fondohome1{
     align-items: center;
     display: flex;
@@ -14,6 +33,7 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
 
 .botGroup{
   margin-top: 2rem;
