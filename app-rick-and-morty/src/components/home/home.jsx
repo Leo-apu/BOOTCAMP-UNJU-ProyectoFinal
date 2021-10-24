@@ -22,6 +22,9 @@ export default function Home(props) {
     const [err,setE] = useState();
     var pag = 1;
     useEffect(()=>{
+        props.isHome(true);
+    },[])
+    useEffect(()=>{
             
             fetch(api)
                 .then(response =>{
@@ -32,8 +35,6 @@ export default function Home(props) {
             .then((response) => response.json())
             .then((data) => {
                 setInfo(data.info);
-                console.log("dataaaaa :");
-                console.log(data.info);
                 if (data.error !== "There is nothing here") {
                     if (data.results !== []) {
      
@@ -59,17 +60,12 @@ export default function Home(props) {
                     }
                 }else{
                     setChars([])
-                    console.log("charsssssssssssssss");
-                    console.log(chars);
+
                 }
                 
                 
             })
             
-        
-        console.log("......................");
-        console.log(err);
-        console.log("......................");
         
     },[orden,api])
     

@@ -1,10 +1,15 @@
 import Button from "@restart/ui/esm/Button";
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "./landing.css";
 
 export default function Landing(props){
+
+
+    useEffect(()=>{
+        props.isHome(false);
+    },[])
         return(
             <section className="landfo">
                 <div className="gam-top"></div>
@@ -23,7 +28,7 @@ export default function Landing(props){
                             <Button className="botn1">ABOUT</Button>
                         </Link>
                         <Link to="/home">
-                            <Button className="botn1" onClick={props.homeSearch()}>HOME</Button>
+                            <Button className="botn1" >HOME</Button>
                         </Link>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Form,Row,Col,Container,Button} from "react-bootstrap";
 import "../contact/contact.css";
@@ -23,6 +23,8 @@ export function validation (input) {
     }
     return errors;
 }
+
+
 const Contact =(props)=> {
     const [state, setState] = useState({
         email: '',
@@ -36,6 +38,9 @@ const Contact =(props)=> {
         mensaje:""
     });
 
+    useEffect(()=>{
+        props.isHome(false);
+    },[])
     
 
     function onHandleChange(e){

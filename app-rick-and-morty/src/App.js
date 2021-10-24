@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/home.jsx';
 import {BrowserRouter,Switch, Route} from 'react-router-dom';
 import N from './components/navbar/navbar';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Character from './components/card/card.jsx';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
@@ -14,13 +14,14 @@ function App() {
 
   const[name,setName] = useState("");
 
+
   const getName = (val) => setName(()=>{
     return val;
   })
   const [search, setSearch] = useState(false)
 
-  const homeSearch = () => setSearch(()=>{
-    return true;
+  const isHome = (val) => setSearch(()=>{
+    return val;
   })
 
 
@@ -32,24 +33,24 @@ function App() {
       
       <Switch>
         <Route exact path="/home">
-          <Home name={name} />
+          <Home name={name} isHome={isHome}/>
         </Route>
         <Route exact path="/home/character/:id">
-          <Character />
+          <Character isHome={isHome}/>
         </Route>
         <Route exact path="/about">
-          <About />
+          <About isHome={isHome}/>
         </Route>
 
         <Route exact path="/contacto">
-          <Contact />
+          <Contact isHome={isHome}/>
         </Route>
 
         <Route exact path="/">
-          <LandingPage homeSearch={homeSearch}/>
+          <LandingPage isHome={isHome}/>
         </Route>
         <Route path="/">
-          <Error />
+          <Error isHome={isHome}/>
         </Route>
 
       </Switch>

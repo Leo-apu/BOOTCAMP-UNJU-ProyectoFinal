@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import {Form,Row,Container,Card,ListGroup,ListGroupItem,Col} from 'react-bootstrap';
 import crca from './card.module.css';
 
-export default function Character (){
+export default function Character (props){
 
     const parametro = useParams();
     const [char,setChar] = useState({});
@@ -22,6 +22,11 @@ export default function Character (){
         }
         console.log(char);
     },[parametro])
+
+    useEffect(()=>{
+        props.isHome(false);
+    },[])
+    
 
 
         return (    

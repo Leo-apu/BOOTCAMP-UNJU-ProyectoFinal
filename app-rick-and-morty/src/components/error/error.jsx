@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container,Row ,Button} from "react-bootstrap";
 import { Link } from "react-router-dom"; 
 import "./error.css";
 
-export default class Error extends React.Component{
-    render(){
+export default function Error (props){
+    useEffect(()=>{
+        props.isHome(false);
+    },[])
+    
         return(
             <Row className="bg">
                 <div className="gam-top"></div>
@@ -26,5 +29,5 @@ export default class Error extends React.Component{
             <div className="gam"></div>
             </Row>
         );
-    }
+    
 }

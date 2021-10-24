@@ -1,8 +1,12 @@
 import {Link} from 'react-router-dom';
 import {Card} from 'react-bootstrap';
 import cha from './character.module.css';
+import { useEffect } from 'react';
 
 export default function Character(props) {
+
+    
+    
     
     return(
         <>
