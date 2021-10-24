@@ -20,61 +20,60 @@ export default function Home(props) {
     const   [api,setApi] = useState("https://rickandmortyapi.com/api/character/?")
     const [orden,setOrden] = useState(1);
     const [err,setE] = useState();
+    var pag = 1;
     useEffect(()=>{
-            updateApi();
-            console.log(".............");
-            console.log(api);
-            console.log(err);
-            console.log(".............");
             
-           
             fetch(api)
                 .then(response =>{
                     setE(!response.ok);
-                    if (!response.ok)throw Error(response.status);
                         return response;
                     
                 })
             .then((response) => response.json())
             .then((data) => {
                 setInfo(data.info);
-                if (data.results !== []) {
+                console.log("dataaaaa :");
+                console.log(data.info);
+                if (data.error !== "There is nothing here") {
+                    if (data.results !== []) {
      
 
-                    if (orden === 1) {
-                        data.results.sort((a, b) => (a.name > b.name ? 1 : -1))
-                    }else{
-                        data.results.sort((a, b) => (b.name > a.name  ? 1 : -1))
+                        if (orden === 1) {
+                            data.results.sort((a, b) => (a.name > b.name ? 1 : -1))
+                        }else{
+                            data.results.sort((a, b) => (b.name > a.name  ? 1 : -1))
+                        }
+                        setChars(
+                            data.results
+                            .map((character) => {
+                                return {
+                                    id: character.id,
+                                    imageUrl: character.image,
+                                    name: character.name,
+                                    species: character.species,
+                                    origin: character.origin,
+                                    status: character.status,
+                                    episodes: character.episode,
+                                };
+                            }))  
                     }
-                    setChars(
-                        data.results
-                        .map((character) => {
-                            return {
-                                id: character.id,
-                                imageUrl: character.image,
-                                name: character.name,
-                                species: character.species,
-                                origin: character.origin,
-                                status: character.status,
-                                episodes: character.episode,
-                            };
-                        }))  
+                }else{
+                    setChars([])
+                    console.log("charsssssssssssssss");
+                    console.log(chars);
                 }
                 
+                
             })
-            .catch(error => {
-                if (error.message === "404") {
-                    console.log(error);
-                    
-                }
             
-            })
         
+        console.log("......................");
+        console.log(err);
+        console.log("......................");
         
-        
-    },[orden,api,filter])
+    },[orden,api])
     
-
+    useEffect(()=>{updateApi()},[filter])
     useEffect(()=>{updateFilter("name",props.name)},[props])
 
     
@@ -86,14 +85,15 @@ export default function Home(props) {
 
 
     
-    const updateFilter = (t,value) => setFilter(()=>({
+    const updateFilter = (t,value,page) => setFilter(()=>({
         ...filter,
-            [t]: value
+            [t]: value,
+            "page":page
     })) 
     const updateApi = ()=> setApi(()=>{
         let aux = url;
         let first = true;
-        let page = false
+        
 
         if (filter.name !== "") {
             if (first) {
@@ -128,14 +128,18 @@ export default function Home(props) {
                 aux=aux +"&gender="+filter.gender;
             }
         }
-        if (filter.page >= 0) {
-            if (first) {
-                first=false;
-                aux=aux +"page="+ filter.page;
-            }else{
-                aux=aux +"&page="+filter.page;
+        
+            if (filter.page >= 0) {
+                if (first) {
+                    first=false;
+                    aux=aux +"page="+ filter.page;
+                }else{
+                    aux=aux +"&page="+filter.page;
+                }
+                
             }
-        }
+        
+        
       return aux;
     })
 
@@ -147,11 +151,11 @@ export default function Home(props) {
                 <Col xs={2} id="sidebar-wrapper">
                 <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
                 <div className={hmm.botGroup} >
-                    <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success fs-3" onClick={() => updateFilter("page",filter.page -1)} >Prev</button>
-                    <button type="button"  className="btn btn-success fs-3" onClick={() => updateFilter("page",filter.page +1)} >Next</button>
+                    <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page -1)} >Prev</button>
+                    <button type="button"  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page +1)} >Next</button>
                 </div>
                 </Col>
-                {err?(<Col className="align-center text-center"> <Row><h2 className={hmm.err}>ERROR 404</h2></Row> <Row ><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">
+                {  err  ?(<Col className="align-center text-center"> <Row><h2 className={hmm.err}>ERROR 404</h2></Row> <Row ><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">
                     <Row className="mt-4 text-center justify-content-around" >
                         {chars.map((data) => {
                                 return (

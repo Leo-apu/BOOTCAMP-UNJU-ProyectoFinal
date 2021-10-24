@@ -9,6 +9,7 @@ export default function CompNavBar(props) {
     const onClick = () => setShowResults(false);
     const onClickHome = () => setShowResults(true)
 
+ 
     return(
             <Navbar className={Style.fond} expand="lg">
             <Link className={Style.bran} onClick={onClick} to="/"><Navbar.Brand> <img src="https://www.brurya.co.il/image/cache/catalog/brands/RM-600x315w.png" className={Style.ic} alt="logo-rm"></img> </Navbar.Brand></Link>

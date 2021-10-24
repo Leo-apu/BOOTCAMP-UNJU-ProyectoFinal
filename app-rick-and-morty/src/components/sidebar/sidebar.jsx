@@ -24,7 +24,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item >
                 <Row>
-                    <Form.Select className={SidMod.sel} onChange={(s) => props.updateFilter("specie",s.target.value)}>
+                    <Form.Select className={SidMod.sel} onChange={(s) => props.updateFilter("specie",s.target.value,1)}>
                         <option value="">Select Specie</option>
                         {species.map((data) => {
                             return (
@@ -40,7 +40,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
                 <Row>
-                    <Form.Select className={SidMod.sel}  onChange={(s) => props.updateFilter("status",s.target.value)}>
+                    <Form.Select className={SidMod.sel}  onChange={(s) => props.updateFilter("status",s.target.value,1)}>
                         <option value="">Select Status</option>
                         <option value="alive">Alive</option>
                         <option value="dead">Dead</option>
@@ -50,7 +50,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
                 <Row>
-                    <Form.Select className={SidMod.sel}  onChange={(s) => props.updateFilter("gender",s.target.value)}>
+                    <Form.Select className={SidMod.sel}  onChange={(s) => props.updateFilter("gender",s.target.value,1)}>
                         <option value="">Select Gender</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
@@ -59,6 +59,12 @@ export default function SideBar(props) {
                     </Form.Select>
                 </Row>
             </Nav.Item>
+            <Nav.Item>
+                <Row>
+                <button type="button"  className="btn btn-success fs-3">Limpiar Filtros</button>
+                </Row>
+            </Nav.Item>
+            
             </Nav>          
         </div>
         );

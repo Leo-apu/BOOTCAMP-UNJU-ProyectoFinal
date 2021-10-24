@@ -17,17 +17,22 @@ function App() {
   const getName = (val) => setName(()=>{
     return val;
   })
+  const [search, setSearch] = useState(false)
+
+  const homeSearch = () => setSearch(()=>{
+    return true;
+  })
 
 
   return (
 
     <BrowserRouter>
     
-      <N getName={getName}/>
+      <N getName={getName} search={search}/>
       
       <Switch>
         <Route exact path="/home">
-          <Home name={name}/>
+          <Home name={name} />
         </Route>
         <Route exact path="/home/character/:id">
           <Character />
@@ -41,7 +46,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <LandingPage />
+          <LandingPage homeSearch={homeSearch}/>
         </Route>
         <Route path="/">
           <Error />

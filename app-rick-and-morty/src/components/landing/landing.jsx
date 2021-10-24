@@ -4,8 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "./landing.css";
 
-export default class Landing extends React.Component{
-    render(){
+export default function Landing(props){
         return(
             <section className="landfo">
                 <div className="gam-top"></div>
@@ -24,12 +23,11 @@ export default class Landing extends React.Component{
                             <Button className="botn1">ABOUT</Button>
                         </Link>
                         <Link to="/home">
-                            <Button className="botn1">HOME</Button>
+                            <Button className="botn1" onClick={props.homeSearch()}>HOME</Button>
                         </Link>
                     </div>
                 </div>
                 <div className="gam"></div>
             </section>
         );
-    }
 } 
