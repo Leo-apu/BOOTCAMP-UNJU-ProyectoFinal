@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import {Nav,Row,Form,ToggleButtonGroup,ToggleButton} from "react-bootstrap";
 import species from '../data/species.json';
 import SidMod from './sidebar.module.css';
 
 export default function SideBar(props) {
+    const [values,setValues] = useState("");
+
+    const handleClick = () =>{
+        console.log("holaaa");
+    }
 
     return (
         <div>
@@ -61,7 +66,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
                 <Row>
-                <button type="button"  className="btn btn-success fs-3">Limpiar Filtros</button>
+                <button type="button" onClick={props.clearFilters}  className="btn btn-success fs-3">Limpiar Filtros</button>
                 </Row>
             </Nav.Item>
             

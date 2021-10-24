@@ -72,7 +72,16 @@ export default function Home(props) {
     useEffect(()=>{updateApi()},[filter])
     useEffect(()=>{updateFilter("name",props.name)},[props])
 
-    
+
+    const clearFilters = () => setFilter(()=>(
+        {
+            name:"",
+            specie:"",
+            status:"",
+            gender:"",
+            page: 1
+            }
+    ))
 
     const sortChars = (v)=> setOrden(()=>{
         return v;
@@ -145,7 +154,7 @@ export default function Home(props) {
         
             <Row>
                 <Col xs={2} id="sidebar-wrapper">
-                <SideBar updateFilter={updateFilter} sortChars={sortChars}/>
+                <SideBar updateFilter={updateFilter} sortChars={sortChars} clearFilters={clearFilters}/>
                 <div className={hmm.botGroup} >
                     <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page -1)} >Prev</button>
                     <button type="button"  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page +1)} >Next</button>
