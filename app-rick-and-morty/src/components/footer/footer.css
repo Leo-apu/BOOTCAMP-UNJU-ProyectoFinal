@@ -4,7 +4,6 @@
 
 footer{
     background-color: var(--dark-Blue-Main-Bg);
-   
     padding: 1.5rem;
 }
 footer ul {
@@ -18,11 +17,15 @@ footer h3{
     
     text-align: center;
     font-size: 2.5rem;
+    padding-left: 4rem;
 }
 footer a{
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
 
+}
+footer h3 :hover{
+    color: chartreuse;
 }
 
 .footer-developers{
@@ -41,12 +44,17 @@ footer a{
 
 .twitter {
     background-image: url('../images/icons/twitter-brands.svg');
-    
-    
+}
+.twitter:hover{
+    background-color: rgb(190, 10, 10);
+    border-radius: 5px;
 }
 .linkedin{
     background-image: url('../images/icons/linkedin-brands.svg');
-
+}
+.linkedin:hover{
+    background-color: rgb(92, 177, 6);
+    border-radius: 5px;
 }
 .link{
     display: block;

@@ -16,7 +16,7 @@ export default function SideBar(props) {
             activeKey="/home"
             onSelect={selectedKey => alert(`selected ${selectedKey}`)}>
                 <div className="sidebar-sticky border-danger"></div>
-            <h2 className={SidMod.titfilt}>FILTROS</h2>
+            <h2 className={SidMod.titfilt}>FILTERS</h2>
             <Nav.Item className={SidMod.ord}>
             <ToggleButtonGroup  type="checkbox" >
                 <ToggleButton className={SidMod.ordbtn} id="tbg-btn-1" value={1} onClick={(s) => props.sortChars(1)}>
@@ -66,7 +66,7 @@ export default function SideBar(props) {
             </Nav.Item>
             <Nav.Item>
                 <Row>
-                <button type="button" onClick={props.clearFilters}  className="btn btn-success fs-3">Limpiar Filtros</button>
+                <button type="button" onClick={props.clearFilters}  className={SidMod.limfil}>Clean Filters</button>
                 </Row>
             </Nav.Item>
             
