@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Row,Col,Container,Button,Card } from "react-bootstrap";
 import "../about/about.css";
 
 const About =(props)=> {
+
+    useEffect(()=>{
+        props.isHome(false);
+    },[])
     return (
         
             <section className="au">

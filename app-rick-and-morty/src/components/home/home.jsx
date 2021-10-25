@@ -8,7 +8,10 @@ import hmm from './home.module.css';
 export default function Home(props) {
     
     const url = "https://rickandmortyapi.com/api/character/?"
-    const [info,setInfo] = useState(null);
+    const [info,setInfo] = useState({
+        pages:0,
+        count:0
+    });
     const [filter,setFilter] =useState({
         name:"",
         specie:"",
@@ -20,7 +23,6 @@ export default function Home(props) {
     const   [api,setApi] = useState("https://rickandmortyapi.com/api/character/?")
     const [orden,setOrden] = useState(1);
     const [err,setE] = useState();
-    var pag = 1;
     useEffect(()=>{
         props.isHome(true);
     },[])
@@ -35,6 +37,7 @@ export default function Home(props) {
             .then((response) => response.json())
             .then((data) => {
                 setInfo(data.info);
+                console.log(info);
                 if (data.error !== "There is nothing here") {
                     if (data.results !== []) {
      
@@ -60,9 +63,13 @@ export default function Home(props) {
                     }
                 }else{
                     setChars([])
+                    setInfo({
+                        pages:0,
+                        count:0
+                    });
 
                 }
-                
+                console.log(filter);
                 
             })
             
@@ -70,7 +77,7 @@ export default function Home(props) {
     },[orden,api])
     
     useEffect(()=>{updateApi()},[filter])
-    useEffect(()=>{updateFilter("name",props.name)},[props])
+    useEffect(()=>{updateFilter("name",props.name,1)},[props])
 
 
     const clearFilters = () => setFilter(()=>(
@@ -98,7 +105,7 @@ export default function Home(props) {
     const updateApi = ()=> setApi(()=>{
         let aux = url;
         let first = true;
-        
+        console.log(filter);
 
         if (filter.name !== "") {
             if (first) {
@@ -157,7 +164,12 @@ export default function Home(props) {
                 <SideBar updateFilter={updateFilter} sortChars={sortChars} clearFilters={clearFilters}/>
                 <div className={hmm.botGroup} >
                     <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page -1)} >Prev</button>
-                    <button type="button"  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page +1)} >Next</button>
+                    <button type="button" disabled={err?true:filter.page === info&&info.pages?true:false} className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page +1)} >Next</button>
+                </div>
+                <div>
+                    <h3>Pagina:{filter.page}</h3>
+                    <h3>Paginas: {!err?info.pages&&info.pages:0}</h3>
+                    <h4>Personajes:{!err?info.count&&info.count:0} </h4>
                 </div>
                 </Col>
                 {  err  ?(<Col className="align-center text-center"> <Row><h2 className={hmm.err}>ERROR 404</h2></Row> <Row ><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">
