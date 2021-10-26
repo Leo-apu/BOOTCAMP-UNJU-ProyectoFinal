@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Nav,Row,Form,ToggleButtonGroup,ToggleButton} from "react-bootstrap";
+import {Nav,Row,Form,ButtonGroup,Button} from "react-bootstrap";
 import species from '../data/species.json';
 import SidMod from './sidebar.module.css';
 
@@ -18,14 +18,14 @@ export default function SideBar(props) {
                 <div className="sidebar-sticky border-danger"></div>
             <h2 className={SidMod.titfilt}>FILTERS</h2>
             <Nav.Item className={SidMod.ord}>
-            <ToggleButtonGroup  type="checkbox" >
-                <ToggleButton className={SidMod.ordbtn} id="tbg-btn-1" value={1} onClick={(s) => props.sortChars(1)}>
+            <ButtonGroup  type="checkbox" >
+                <Button className={SidMod.ordbtn} id="tbg-btn-1" value={1} onClick={(s) => props.sortChars(1)}>
                     UP
-                </ToggleButton>
-                <ToggleButton className={SidMod.ordbtn} id="tbg-btn-2" value={2} onClick={() => props.sortChars(2)}>
+                </Button>
+                <Button className={SidMod.ordbtn} id="tbg-btn-2" value={2} onClick={() => props.sortChars(2)}>
                     DOWN
-                </ToggleButton>
-            </ToggleButtonGroup>
+                </Button>
+            </ButtonGroup>
             </Nav.Item>
             <Nav.Item >
                 <Row>

@@ -46,6 +46,11 @@
     color: black;
     box-shadow: 0 2px 16px 0 rgba(255, 230, 5, 0.993), 0 1px 20px 0 rgba(0,0,0,0.19);
 }
+.ordbtn:focus{
+    background-color: coral;
+    color: black;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.993), 0 1px 20px 0 rgba(0,0,0,0.19);
+}
 .sel{
     background-color: coral;
     padding: 10px;

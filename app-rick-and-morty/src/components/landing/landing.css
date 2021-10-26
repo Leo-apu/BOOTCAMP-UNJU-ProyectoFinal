@@ -44,6 +44,8 @@ width: 100%;
 }
 .contland {
     text-align: center;
+    margin-top: 9rem;
+    margin-left: 5rem;
 }
 .contland h2 {
     font-weight: bold;
@@ -76,11 +78,10 @@ width: 100%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
     transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
-    font-size: 30px;
 }
 .botn :hover{
     
@@ -90,8 +91,9 @@ width: 100%;
     background-color: rgb(43, 255, 15);
     border-radius: 10px;
     font-family: 'shlopregular';
-    font-size: 30px;
+    font-size: 40px;
 }
 .rm{
     font-size: 400px;
+    margin-left: 5rem;
 }
