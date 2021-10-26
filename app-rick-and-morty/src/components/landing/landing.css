@@ -16,8 +16,7 @@
   }
 
 .landfo{
-    height: 85.6vh;
-    align-items: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
@@ -42,26 +41,22 @@ z-index: 777;
 width: 100%;
 
 }
-.contland {
-    text-align: center;
-    margin-top: 9rem;
-    margin-left: 5rem;
-}
+
 .contland h2 {
     font-weight: bold;
-    margin-top: 3rem;
     margin-bottom: 4rem;
     text-transform: capitalize;
     text-shadow: 0 0 10px   rgb(255, 79, 9),2px 2px 10px   greenyellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contland h1 {
-    font-size: 9rem;
+    margin-top: 23rem;
+    font-size: 7rem;
     text-shadow: 5px 5px 8px gold, 2px 2px 10px red;
     font-family: 'GSR';
 }
 .botn {
-    margin-top: 80px;
+    
     display: flex;
     align-items: center;
     justify-content: space-around;

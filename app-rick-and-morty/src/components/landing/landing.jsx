@@ -12,9 +12,8 @@ export default function Landing(props){
     },[])
         return(
             <section className="landfo">
-                <div className="gam-top"></div>
                 <div className="contland">
-                    <h1 className="rm mt-5">Rick and Morty</h1>
+                    <h1 className="rm ">Rick and Morty</h1>
                     
                     <div className="botn mb-5">
                         <Link to="/about">

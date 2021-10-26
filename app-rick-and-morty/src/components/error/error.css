@@ -1,5 +1,5 @@
 .bg{
-  height: 85.6vh;
+  height: 100vh;
   background-color: black;
   margin: 0;
 }
@@ -79,7 +79,7 @@
 .space {
   position: absolute;
   width: 100vw;
-  height: 85.6vh;
+  height: 100vh;
   z-index: 1;
   background-size: 240px;
   backface-visibility: visible;
