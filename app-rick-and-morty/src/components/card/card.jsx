@@ -2,9 +2,10 @@ import React, { useState , useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import {Form,Row,Container,Card,ListGroup,ListGroupItem,Col} from 'react-bootstrap';
 import crca from './card.module.css';
+import {Link} from "react-router-dom";
 
 export default function Character (props){
-
+    
     const parametro = useParams();
     const [char,setChar] = useState({});
     const [e,setE] = useState(false);
@@ -32,10 +33,10 @@ export default function Character (props){
         return (    
             <section className={crca.fonca}>
             <div className={crca.gamca}></div>
-            <Container >
-                <Row className="mt-1">
-                    <Col className="col-4 offset-4">
-                        <Card className={crca.fnca} style={{ width: '20rem' }} >
+            <Container className="" >
+                <Row className="">
+                    <Container className="">
+                        <Card className={crca.fnca} >
                 
                             <Card.Body>
                                 <Card.Title className={crca.titulca}>{char.name}</Card.Title>
@@ -43,21 +44,22 @@ export default function Character (props){
                                 <Card.Text className={crca.tex}>Estado: {char.status}</Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
-                                <ListGroupItem>Genero: {char.gender}</ListGroupItem>
-                                <ListGroupItem>Creado: {char.created}</ListGroupItem>
-                                <ListGroupItem>Tipo: {char.type}</ListGroupItem>
-                                <ListGroupItem>Origen: {char.origin && char.origin.name}</ListGroupItem>
-                                <ListGroupItem>Localizacion: {char.location && char.location.name}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Genero: {char.gender}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Creado: {char.created}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Tipo: {char.type}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Origen: {char.origin && char.origin.name}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Localizacion: {char.location && char.location.name}</ListGroupItem>
                                 
                             </ListGroup>
                         </Card>
-                        
-                    </Col>
+                        <div className={crca.bu}>
+                            <Link to="/home">
+                                <button className={crca.bu1}>Return to home</button>
+                            </Link>
+                        </div>
+                    </Container>
                 
                 </Row>
-                
-
-
            </Container>
            </section>
         )
