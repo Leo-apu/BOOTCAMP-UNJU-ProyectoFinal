@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Row,Col,Container,Button,Card } from "react-bootstrap";
-import "../about/about.css";
+import abf from "../about/about.module.css";
 
 const About =(props)=> {
 
@@ -10,20 +10,21 @@ const About =(props)=> {
     },[])
     return (
         
-            <section className="au">
+            <section className={abf.au}>
                 <Container className="d-block container-fluid">
                 <Row className="wrapperr justify-content-center align-content-center">
-                    <Col className="col my-5 d-flex">
-                            <Row className="container align-content-center">
-                            <div className="col-md-4 bg-info p-0">
-                                <img src={"/img/CoMperfil.jpg"} width="1000" className="img-fluid rounded-start" alt="..."></img>
+                    <Container className={abf.tarj}>
+                            <Row className={abf.cont}>
+                            <div className="col-md-4 p-1">
+                                <img src={"/img/CoMperfil.jpg"} width="500" className={abf.im}  alt="..."></img>
                             </div>
                             <Card className="col-md-8 rounded-end" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
-                                <Card.Header>DESARROLLADOR</Card.Header>
+                                <Card.Header className="fw-bolder fs-5">CREADOR DE LA APP</Card.Header>
                                 <Card.Body>
-                                <Card.Title>INFORMACION</Card.Title>
+                                <Card.Title>ESTUDIANTE</Card.Title>
                                 <Card.Subtitle>
-                                    <p class="fw-bold text-dark">CRISTIAN MICHEL</p>
+                                    <p class="fw-bold text-dark">CRISTIAN ORLANDO MICHEL</p>
+                                    <p class="fw-bold text-dark">Analista Prog. Universitario</p>
                                 </Card.Subtitle>
                                 <Card.Text>
                                     <small class="text-muted"> Contacto: cristianmichel33@gmail.com </small>
@@ -32,16 +33,17 @@ const About =(props)=> {
                             </Card>
                             </Row>  
 
-                            <Row className="container align-content-center my-3">
-                            <div className="col-md-4 bg-info p-0">
-                                <img src="/img/LvCperfil.jpg" width="1000" className="img-fluid rounded-start" alt="..."></img>
+                            <Row className={abf.cont}>
+                            <div className="col-md-4 p-1">
+                                <img src="/img/LvCperfil.jpg" width="500" className={abf.im}  alt="..."></img>
                             </div>
                             <Card className="col-md-8 rounded-end" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
-                                <Card.Header>DESARROLLADOR</Card.Header>
+                                <Card.Header className="fw-bolder fs-5">CREADOR DE LA APP</Card.Header>
                                 <Card.Body>
-                                <Card.Title>INFORMACION</Card.Title>
+                                <Card.Title>ESTUDIANTE</Card.Title>
                                 <Card.Subtitle>
-                                    <p class="fw-bold text-dark">LEANDRO CRUZ </p>
+                                    <p class="fw-bold text-dark">LEANDRO VICTORINO CRUZ </p>
+                                    <p class="fw-bold text-dark">Analista Prog. Universitario</p>
                                 </Card.Subtitle>
                                 <Card.Text>
                                     <small class="text-muted"> Contacto: leovcruz0304@gmail.com </small>
@@ -51,7 +53,7 @@ const About =(props)=> {
                             </Row> 
 
                             
-                    </Col>                            
+                    </Container>                            
                 </Row>
                 </Container>
             </section>

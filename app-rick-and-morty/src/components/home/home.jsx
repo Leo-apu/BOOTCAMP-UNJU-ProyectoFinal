@@ -25,6 +25,7 @@ export default function Home(props) {
     const [err,setE] = useState();
     useEffect(()=>{
         props.isHome(true);
+        clearFilters();
     },[])
     useEffect(()=>{
             
@@ -164,12 +165,12 @@ export default function Home(props) {
                 <SideBar updateFilter={updateFilter} sortChars={sortChars} clearFilters={clearFilters}/>
                 <div className={hmm.botGroup} >
                     <button type="button" disabled={filter.page ===1?true:false}  className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page -1)} >Prev</button>
-                    <button type="button" disabled={err?true:filter.page === info&&info.pages?true:false} className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page +1)} >Next</button>
+                    <button type="button" disabled={err?true:filter.page === info.pages?true:false} className="btn btn-success fs-3" onClick={() => updateFilter(null,null,filter.page +1)} >Next</button>
                 </div>
-                <div>
-                    <h3>Pagina:{filter.page}</h3>
-                    <h3>Paginas: {!err?info.pages&&info.pages:0}</h3>
-                    <h4>Personajes:{!err?info.count&&info.count:0} </h4>
+                <div className={hmm.pagind}>
+                    <h3 className={hmm.pagintex}>Page Number : {filter.page}</h3>
+                    <h3 className={hmm.pagintex}>Pages       : {!err?info.pages&&info.pages:0}</h3>
+                    <h4 className={hmm.pagintex}>Characters  : {!err?info.count&&info.count:0} </h4>
                 </div>
                 </Col>
                 {  err  ?(<Col className="align-center text-center"> <Row><h2 className={hmm.err}>ERROR 404</h2></Row> <Row ><img src={"/img/notFound.png"} alt="" /></Row></Col>):( <Col xs={10} id="page-content-wrapper">

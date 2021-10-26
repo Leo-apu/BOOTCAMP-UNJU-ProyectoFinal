@@ -29,6 +29,7 @@
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     
+    
 }
 .ordbtn{
     background-color: rgb(29, 199, 14);
@@ -38,11 +39,17 @@
     border: none;
     font-family: 'shlopregular';
     font-size: 35px;
+    border-radius: 20px;
 }
 .ordbtn:hover{
     background-color: rgb(239, 255, 16);
     color: black;
-    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.24), 0 1px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 2px 16px 0 rgba(255, 230, 5, 0.993), 0 1px 20px 0 rgba(0,0,0,0.19);
+}
+.ordbtn:focus{
+    background-color: coral;
+    color: black;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.993), 0 1px 20px 0 rgba(0,0,0,0.19);
 }
 .sel{
     background-color: coral;
@@ -52,4 +59,19 @@
     font-family: fantasy;
     
 }
-
+.limfil{
+    background-color: rgb(29, 199, 14);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    font-family: 'shlopregular';
+    font-size: 30px;
+    margin: 5px 0 5px 10px;
+    border-radius: 50px;
+}
+.limfil:hover{
+    background-color: rgb(241, 45, 61);
+    color: black;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.24), 0 1px 20px 0 rgba(0,0,0,0.19);
+}

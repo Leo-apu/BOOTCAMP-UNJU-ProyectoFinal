@@ -13,13 +13,13 @@ export default function Footer(){
 
                 <div className="footerContainer">
                 <ul>
-                    <li><a className="twitter link" href="https://twitter.com/mike47k1"></a></li>
-                    <li><a className="linkedin link" href="https://www.linkedin.com/in/cristian-michel-a3b986200?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlbtJjWNmT7aXEs8%2B0mEKyw%3D%3D"></a></li>
+                    <li><a className="twitter link" href="https://twitter.com/mike47k1" target="_blank"></a></li>
+                    <li><a className="linkedin link" href="https://www.linkedin.com/in/cristian-michel-a3b986200?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlbtJjWNmT7aXEs8%2B0mEKyw%3D%3D" target="_blank"></a></li>
                 </ul>
 
                 <ul>
-                    <li><a className="twitter link" href=""></a></li>
-                    <li><a className="linkedin link" href=""></a></li>
+                    <li><a className="twitter link" href="" target="_blank"></a></li>
+                    <li><a className="linkedin link" href="https://www.linkedin.com/in/leandro-victorino-cruz-281889224" target="_blank"></a></li>
                 </ul>
                 
                 </div>
