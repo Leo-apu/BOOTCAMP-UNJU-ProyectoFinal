@@ -110,9 +110,8 @@ const Contact =(props)=> {
         <section className={Cont.co} >
             <Container className="">
                 <Row className="">
-                    <Col className="">
                         <Col className={Cont.ab}>
-                            <div class="container mt-5 ">
+                            <div class="d-flex justify-content-center">
                                 <Form className={Cont.fnco}>
                                     <h5 className="text-center text-black fs-1">FORMULARIO DE CONTACTO</h5>
                                     <div >
@@ -126,7 +125,7 @@ const Contact =(props)=> {
                                             onChange={(e) => onHandleChange(e)}
                                         /> 
                                         {fails.email ?
-                                            <div class="alert alert-danger" role="alert">
+                                            <div class="alert alert-danger p-0 m-0" role="alert">
                                             <p style={{color: 'red'}}> {fails.email}</p> 
                                             </div>
                                             : <p></p>
@@ -143,7 +142,7 @@ const Contact =(props)=> {
                                             onChange={(e) => onHandleChange(e)}
                                         /> 
                                         {fails.asunto && 
-                                        <div class="alert alert-danger" role="alert">
+                                        <div class="alert alert-danger p-0 m-0" role="alert">
                                         <p style={{color: 'red'}}> {fails.asunto} </p>
                                         </div>
                                         }
@@ -159,7 +158,7 @@ const Contact =(props)=> {
                                             onChange={(e) => onHandleChange(e)}
                                         /> 
                                         {fails.mensaje && 
-                                        <div class="alert alert-danger" role="alert">
+                                        <div class="alert alert-danger p-0 m-0" role="alert">
                                         <p style={{color: 'red'}}> {fails.mensaje} </p>
                                         </div>
                                         }
@@ -177,7 +176,6 @@ const Contact =(props)=> {
                                 </Form>     
                             </div>
                         </Col>
-                    </Col>
                 </Row>
             </Container>
             

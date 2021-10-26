@@ -10,7 +10,6 @@ export default function Error (props){
     
         return(
             <Row className="bg">
-                <div className="gam-top"></div>
             <div class="space"></div>
             <div class="wrapper">
                 <div class="img-wrapper">
@@ -26,7 +25,6 @@ export default function Error (props){
                         </Link>
                     </div>
             </div>
-            <div className="gam"></div>
             </Row>
         );
     

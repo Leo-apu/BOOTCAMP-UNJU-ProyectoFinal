@@ -29,20 +29,23 @@ function App() {
 
     <BrowserRouter>
     
-      <N getName={getName} search={search}/>
+      
       
       <Switch>
         <Route exact path="/home">
+          <N getName={getName} search={search}/>
           <Home name={name} isHome={isHome}/>
         </Route>
         <Route exact path="/home/character/:id">
           <Character isHome={isHome}/>
         </Route>
         <Route exact path="/about">
+        <N getName={getName} search={search}/>
           <About isHome={isHome}/>
         </Route>
 
         <Route exact path="/contacto">
+          <N getName={getName} search={search}/>
           <Contact isHome={isHome}/>
         </Route>
 

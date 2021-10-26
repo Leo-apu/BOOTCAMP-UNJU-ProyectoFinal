@@ -14,13 +14,14 @@
   box-shadow: 2px 1px 10px 5px rgb(255, 81, 0);
   padding: 8px;
 }
-.tarj{
+.cardAbout{
+  padding-top: 7rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  padding: 5rem;
 }
+
 .im{
   box-shadow: 2px 1px 10px 5px rgb(0, 0, 0);
   display: flex;

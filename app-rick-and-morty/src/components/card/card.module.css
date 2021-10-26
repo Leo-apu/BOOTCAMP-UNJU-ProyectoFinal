@@ -23,7 +23,9 @@
   
   }
 .fnca {
-    margin: 4rem 30rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: fit-content;
     text-align: center;
     background: rgb(2, 0, 8);
     color: rgb(43, 255, 0);
@@ -54,12 +56,12 @@
 }
 
 .titulca{
+    padding-top: 1rem;
     font-family: 'GSR';
     font-size: 30px;
     
 }
 .tex{
-    padding-top: 1rem;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

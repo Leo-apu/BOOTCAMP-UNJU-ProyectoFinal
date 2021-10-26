@@ -32,13 +32,11 @@ export default function Character (props){
 
         return (    
             <section className={crca.fonca}>
-            <div className={crca.gamca}></div>
             <Container className="" >
-                <Row className="">
-                    <Container className="">
+                <Row className="d-flex justify-content-center">
                         <Card className={crca.fnca} >
                 
-                            <Card.Body>
+                            <Card.Body className="p-0">
                                 <Card.Title className={crca.titulca}>{char.name}</Card.Title>
                                 <Card.Img className={crca.fotca} variant="top" src={char.image}  />
                                 <Card.Text className={crca.tex}>Estado: {char.status}</Card.Text>
@@ -57,7 +55,6 @@ export default function Character (props){
                                 <button className={crca.bu1}>Return to home</button>
                             </Link>
                         </div>
-                    </Container>
                 </Row>
            </Container>
            </section>

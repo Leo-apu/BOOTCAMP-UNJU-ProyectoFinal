@@ -11,14 +11,13 @@ const About =(props)=> {
     return (
         
             <section className={abf.au}>
-                <Container className="d-block container-fluid">
-                <Row className="wrapperr justify-content-center align-content-center">
-                    <Container className={abf.tarj}>
-                            <Row className={abf.cont}>
-                            <div className="col-md-4 p-1">
+                <Container fluid>
+                    <div className={abf.cardAbout}>
+                    <Row className={abf.cont}>
+                            <div className="col-md-4 p-1 d-flex">
                                 <img src={"/img/CoMperfil.jpg"} width="500" className={abf.im}  alt="..."></img>
                             </div>
-                            <Card className="col-md-8 rounded-end" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
+                            <Card className="col-md-8 " border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
                                 <Card.Header className="fw-bolder fs-5">CREADOR DE LA APP</Card.Header>
                                 <Card.Body>
                                 <Card.Title>ESTUDIANTE</Card.Title>
@@ -34,10 +33,10 @@ const About =(props)=> {
                             </Row>  
 
                             <Row className={abf.cont}>
-                            <div className="col-md-4 p-1">
+                            <div className="col-md-4 p-1 d-flex">
                                 <img src="/img/LvCperfil.jpg" width="500" className={abf.im}  alt="..."></img>
                             </div>
-                            <Card className="col-md-8 rounded-end" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
+                            <Card className="col-md-8" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
                                 <Card.Header className="fw-bolder fs-5">CREADOR DE LA APP</Card.Header>
                                 <Card.Body>
                                 <Card.Title>ESTUDIANTE</Card.Title>
@@ -52,9 +51,11 @@ const About =(props)=> {
                             </Card>
                             </Row> 
 
+                    </div>
                             
-                    </Container>                            
-                </Row>
+
+                            
+
                 </Container>
             </section>
     );
