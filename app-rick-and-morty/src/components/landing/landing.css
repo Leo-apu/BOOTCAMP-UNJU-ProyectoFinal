@@ -6,6 +6,14 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'shlopregular';
+    src: url('../font/custom/shlop_rg-webfont.woff2') format('woff2'),
+         url('../font/custom/shlop_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
 
 .landfo{
     height: 85.6vh;
@@ -46,32 +54,44 @@ width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contland h1 {
-    font-size: 7rem;
+    font-size: 9rem;
     text-shadow: 5px 5px 8px gold, 2px 2px 10px red;
     font-family: 'GSR';
 }
 .botn {
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-family: 'shlopregular';
+    
     
 }
 .botn1 {
     background-color: orangered;
     border: none;
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
+    font-size: 30px;
 }
 .botn :hover{
     
     text-shadow: 0 12px 16px 0 rgba(0,0,0,0,0.50), 0 17px 50px 0 rgba(0,0,0,0,0.80);
     color: rgb(0, 0, 0);
+    text-decoration-style:wavy;
+    background-color: rgb(43, 255, 15);
+    border-radius: 10px;
+    font-family: 'shlopregular';
+    font-size: 30px;
+}
+.rm{
+    font-size: 400px;
 }
