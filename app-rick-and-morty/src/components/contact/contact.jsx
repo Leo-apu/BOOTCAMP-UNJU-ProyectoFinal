@@ -111,8 +111,8 @@ const Contact =(props)=> {
             <Container className="">
                 <Row className="">
                     <Col className="">
-                        <Col>
-                            <div class="container mt-3 ">
+                        <Col className={Cont.ab}>
+                            <div class="container mt-5 ">
                                 <Form className={Cont.fnco}>
                                     <h5 className="text-center text-black fs-1">FORMULARIO DE CONTACTO</h5>
                                     <div >

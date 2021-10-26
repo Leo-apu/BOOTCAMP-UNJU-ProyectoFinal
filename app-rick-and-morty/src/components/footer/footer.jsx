@@ -19,7 +19,7 @@ export default function Footer(){
 
                 <ul>
                     <li><a className="twitter link" href="" target="_blank"></a></li>
-                    <li><a className="linkedin link" href="" target="_blank"></a></li>
+                    <li><a className="linkedin link" href="https://www.linkedin.com/in/leandro-victorino-cruz-281889224" target="_blank"></a></li>
                 </ul>
                 
                 </div>
