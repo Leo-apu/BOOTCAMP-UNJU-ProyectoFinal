@@ -58,7 +58,6 @@ export default function Character (props){
                             </Link>
                         </div>
                     </Container>
-                
                 </Row>
            </Container>
            </section>

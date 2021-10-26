@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Form,Row,Col,Container,Button} from "react-bootstrap";
-import "../contact/contact.css";
+import Cont from "../contact/contact.module.css";
 import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router';
+import Swal from 'sweetalert2-react';
 
 export function validation (input) {
     let errors = {}
@@ -26,6 +28,8 @@ export function validation (input) {
 
 
 const Contact =(props)=> {
+    /*const history = useHistory();*/
+
     const [state, setState] = useState({
         email: '',
         asunto: '',
@@ -55,17 +59,64 @@ const Contact =(props)=> {
                     })
                 )
 }
+/** 
+    const vent1 = () => {
+        Swal.fire({
+            title: "Send this Message?",
+            confirButtonColor: "#64C132",
+            cancelButtonColor: "#ec1d24",
+            cancelButtonText: 'No',
+            showCancelButton: true,
+            confirmButtonText:"Yes",
+        }).then((result)=> {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    position:"top",
+                    icon: "succes",
+                    title: "Your message has been sent successfully",
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                setTimeout(()=> {
+                    history.push('/home');
+                },1400);
+            }
+        });
+    };
+        const vent2 = () => {
+        Swal.fire({
+            title: "Exit from the contact us?",
+            confirButtonColor: "#64C132",
+            cancelButtonColor: "#ec1d24",
+            cancelButtonText: 'No',
+            showCancelButton: true,
+            confirmButtonText:"Yes",
+        }).then((result)=> {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    position:"top",
+                    icon: "error",
+                    title: "Your message was canceled",
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                setTimeout(()=> {
+                    history.push('/home');
+                },1400);
+            }
+        });
+    }; **/
     return (
-        <section className="co " >
-            <Container className="container-fluid mb-4">
-                <Row className="justify-content-center align-content-center">
-                    <Col className="col-md-5 my-5 ">
-                        <Col className="bg-warning rounded-3 fon">
+        <section className={Cont.co} >
+            <Container className="">
+                <Row className="">
+                    <Col className="">
+                        <Col>
                             <div class="container mt-3 ">
-                                <Form className="py-4">
+                                <Form className={Cont.fnco}>
                                     <h5 className="text-center text-black fs-1">FORMULARIO DE CONTACTO</h5>
-                                    <div className="d-grid">
-                                        <label class="col-sm-2 col-form-label text-black fs-3"> EMAIL </label>
+                                    <div >
+                                        <label class="col-sm-2 col-form-label text-black fs-2"> EMAIL </label>
                                         <input
                                             type="text"
                                             class="form-control p-3"
@@ -113,12 +164,14 @@ const Contact =(props)=> {
                                         </div>
                                         }
                                     </div>
-                                    <div className="d-flex justify-content-around">
-                                        <Button  type="submit" className="btn btn-success btn-lg " disabled={ fails.email || fails.asunto|| fails.mensaje || state.email === "" || state.asunto === "" || state.mensaje === ""  ? true : false  }>
-                                        <Link className="ju" to="/home" >Enviar</Link>
+                                    <div className="d-flex justify-content-around mt-3">
+                                        <Button  type="submit"  className={Cont.btn1} 
+                                        disabled={ fails.email || fails.asunto|| fails.mensaje || 
+                                        state.email === "" || state.asunto === "" || state.mensaje === ""  ? true : false  }>
+                                        <Link className={Cont.ju} to="/home" >Enviar</Link>
                                         </Button>
-                                        <Button  type="submit" className="btn btn-danger btn-lg " >
-                                        <Link className="ju" to="/home" >Cancel</Link>
+                                        <Button  type="submit"  className={Cont.btn} >
+                                        <Link className={Cont.ju} to="/home" >Cancel</Link>
                                         </Button>
                                     </div>
                                 </Form>     
