@@ -23,7 +23,7 @@ export default function Footer(){
                 </ul>
                 
                 </div>
-                <h3><Link to="/contacto">Contact Us</Link></h3>
+                <h3><Link to="/contact">Contact Us</Link></h3>
             </footer>
         );
     }

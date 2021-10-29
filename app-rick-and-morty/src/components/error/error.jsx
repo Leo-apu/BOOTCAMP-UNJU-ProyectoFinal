@@ -15,7 +15,7 @@ export default function Error (props){
                 <div class="img-wrapper">
                     <span>44</span>
                 </div>
-                <p>UNIVERSO DESCONOCIDO - Error de direccionamiento de pagina. <br/> Elige otro universo.</p>
+                <p>UNKNOWN UNIVERSE - Page addressing error.<br/> Choose another universe.</p>
                 <div className="botn mb-5">
                         <Link to="/about">
                             <Button className="botn1">ABOUT</Button>

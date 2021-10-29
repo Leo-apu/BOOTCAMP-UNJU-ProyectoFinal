@@ -39,14 +39,14 @@ export default function Character (props){
                             <Card.Body className="p-0">
                                 <Card.Title className={crca.titulca}>{char.name}</Card.Title>
                                 <Card.Img className={crca.fotca} variant="top" src={char.image}  />
-                                <Card.Text className={crca.tex}>Estado: {char.status}</Card.Text>
+                                <Card.Text className={crca.tex}>Status: {char.status}</Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
-                                <ListGroupItem className={crca.lisg}>Genero: {char.gender}</ListGroupItem>
-                                <ListGroupItem className={crca.lisg}>Creado: {char.created}</ListGroupItem>
-                                <ListGroupItem className={crca.lisg}>Tipo: {char.type}</ListGroupItem>
-                                <ListGroupItem className={crca.lisg}>Origen: {char.origin && char.origin.name}</ListGroupItem>
-                                <ListGroupItem className={crca.lisg}>Localizacion: {char.location && char.location.name}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Gender: {char.gender}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Created: {char.created}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Type: {char.type}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Origin: {char.origin && char.origin.name}</ListGroupItem>
+                                <ListGroupItem className={crca.lisg}>Location: {char.location && char.location.name}</ListGroupItem>
                                 
                             </ListGroup>
                         </Card>

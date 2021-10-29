@@ -14,14 +14,14 @@ export function validation (input) {
         errors.email = "Email must be a email"
     }
     if(!input.asunto){
-        errors.asunto = "Asunto is required"
+        errors.asunto = "Subject is required"
     } else if(Object.keys(input.asunto).length<10){
-        errors.asunto = "Asunto debe escribir mas de 10 caracteres"
+        errors.asunto = "Subject must be more than 10 characters"
     }
     if(!input.mensaje){
-        errors.mensaje = "Mensaje is required"
+        errors.mensaje = "Message is required"
     } else if(Object.keys(input.mensaje).length>256){
-        errors.mensaje = "debe escribir menos de 256 caracteres"
+        errors.mensaje = "Message must be less than 256 characters"
     }
     return errors;
 }
@@ -113,14 +113,14 @@ const Contact =(props)=> {
                         <Col className={Cont.ab}>
                             <div class="d-flex justify-content-center">
                                 <Form className={Cont.fnco}>
-                                    <h5 className="text-center text-black fs-1">FORMULARIO DE CONTACTO</h5>
+                                    <h5 className="text-center text-black fs-1">CONTACT FORM</h5>
                                     <div >
                                         <label class="col-sm-2 col-form-label text-black fs-2"> EMAIL </label>
                                         <input
                                             type="text"
                                             class="form-control p-3"
                                             name='email'
-                                            placeholder="Ingrese su Email : aaaa@gmail.com"
+                                            placeholder="Enter your Email : example@gmail.com"
                                             value={state.email}
                                             onChange={(e) => onHandleChange(e)}
                                         /> 
@@ -132,12 +132,12 @@ const Contact =(props)=> {
                                         }
                                     </div> 
                                     <div>
-                                        <label class="col-sm-2 col-form-label text-black fs-3"> ASUNTO </label>
+                                        <label class="col-sm-2 col-form-label text-black fs-3"> Subject </label>
                                         <input
                                             type="text"
                                             class="form-control"
                                             name='asunto'
-                                            placeholder="Ingrese Asunto : minimo 10 caracteres"
+                                            placeholder="Enter Subject : minimum 10 characters"
                                             value={state.asunto}
                                             onChange={(e) => onHandleChange(e)}
                                         /> 
@@ -148,12 +148,12 @@ const Contact =(props)=> {
                                         }
                                     </div> 
                                     <div>
-                                        <label class="col-sm-2 col-form-label mt-2 text-black fs-3"> MENSAJE </label>
+                                        <label class="col-sm-2 col-form-label mt-2 text-black fs-3"> Message </label>
                                         <textarea
                                             type="text"
                                             class="form-control p-3 mb-2"
                                             name='mensaje'
-                                            placeholder="Ingrese su Mensaje : Maximo de 256 palabras"
+                                            placeholder="Enter Message :  Maximum 256 characters"
                                             value={state.mensaje}
                                             onChange={(e) => onHandleChange(e)}
                                         /> 
@@ -167,7 +167,7 @@ const Contact =(props)=> {
                                         <Button  type="submit"  className={Cont.btn1} 
                                         disabled={ fails.email || fails.asunto|| fails.mensaje || 
                                         state.email === "" || state.asunto === "" || state.mensaje === ""  ? true : false  }>
-                                        <Link className={Cont.ju} to="/home" >Enviar</Link>
+                                        <Link className={Cont.ju} to="/home" >Send</Link>
                                         </Button>
                                         <Button  type="submit"  className={Cont.btn} >
                                         <Link className={Cont.ju} to="/home" >Cancel</Link>

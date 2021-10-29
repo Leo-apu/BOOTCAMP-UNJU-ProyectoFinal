@@ -44,7 +44,7 @@ function App() {
           <About isHome={isHome}/>
         </Route>
 
-        <Route exact path="/contacto">
+        <Route exact path="/contact">
           <N getName={getName} search={search}/>
           <Contact isHome={isHome}/>
         </Route>

@@ -18,15 +18,15 @@ const About =(props)=> {
                                 <img src={"/img/CoMperfil.jpg"} width="500" className={abf.im}  alt="..."></img>
                             </div>
                             <Card className="col-md-8 " border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
-                                <Card.Header className="fw-bolder fs-5">CREADOR DE LA APP</Card.Header>
+                                <Card.Header className="fw-bolder fs-5">APP Creator</Card.Header>
                                 <Card.Body>
-                                <Card.Title>ESTUDIANTE</Card.Title>
+                                <Card.Title>STUDENT</Card.Title>
                                 <Card.Subtitle>
                                     <p class="fw-bold text-dark">CRISTIAN ORLANDO MICHEL</p>
                                     <p class="fw-bold text-dark">Analista Prog. Universitario</p>
                                 </Card.Subtitle>
                                 <Card.Text>
-                                    <small class="text-muted"> Contacto: cristianmichel33@gmail.com </small>
+                                    <small class="text-muted"> Contact: cristianmichel33@gmail.com </small>
                                 </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -37,15 +37,15 @@ const About =(props)=> {
                                 <img src="/img/LvCperfil.jpg" width="500" className={abf.im}  alt="..."></img>
                             </div>
                             <Card className="col-md-8" border="danger" style={{ color:"black" ,backgroundColor:"greenyellow"}}>
-                                <Card.Header className="fw-bolder fs-5">CREADOR DE LA APP</Card.Header>
+                                <Card.Header className="fw-bolder fs-5">APP Creator</Card.Header>
                                 <Card.Body>
-                                <Card.Title>ESTUDIANTE</Card.Title>
+                                <Card.Title>STUDENT</Card.Title>
                                 <Card.Subtitle>
                                     <p class="fw-bold text-dark">LEANDRO VICTORINO CRUZ </p>
                                     <p class="fw-bold text-dark">Analista Prog. Universitario</p>
                                 </Card.Subtitle>
                                 <Card.Text>
-                                    <small class="text-muted"> Contacto: leovcruz0304@gmail.com </small>
+                                    <small class="text-muted"> Contact: leovcruz0304@gmail.com </small>
                                 </Card.Text>
                                 </Card.Body>
                             </Card>
