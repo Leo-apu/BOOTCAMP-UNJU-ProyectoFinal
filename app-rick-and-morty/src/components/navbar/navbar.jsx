@@ -20,7 +20,7 @@ export default function CompNavBar(props) {
  
     return(
             <Navbar className={Style.fond} expand="lg">
-            <Link className={Style.bran} onClick={onClick} to="/"><Navbar.Brand> <img src="https://www.brurya.co.il/image/cache/catalog/brands/RM-600x315w.png" className={Style.ic} alt="logo-rm"></img> </Navbar.Brand></Link>
+            <Link className={Style.bran} onClick={onClick} to="/"><Navbar.Brand> <img src="https://res.cloudinary.com/dkfzj9tmk/image/upload/v1677166689/backend-project/Rick-And-Morty-Logo-Transparent-File_arpmel.png" className={Style.ic} alt="logo-rm"></img> </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll" className="justify-content-end">
 
