@@ -4,7 +4,6 @@ import { Form,Row,Col,Container,Button} from "react-bootstrap";
 import Cont from "../contact/contact.module.css";
 import {Link} from 'react-router-dom';
 import {useHistory} from 'react-router';
-import Swal from 'sweetalert2-react';
 
 export function validation (input) {
     let errors = {}
